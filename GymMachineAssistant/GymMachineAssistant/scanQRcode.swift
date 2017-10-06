@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  FirstViewController.swift
 //  GymMachineAssistant
 //
 //  Created by Woolery,Matthew A on 10/6/17.
@@ -8,8 +8,11 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class scanQRcode : UIViewController {
 
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.

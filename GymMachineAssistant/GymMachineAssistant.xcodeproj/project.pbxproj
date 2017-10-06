@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		CDF913D31F88099F00ED350C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF913D21F88099F00ED350C /* AppDelegate.swift */; };
-		CDF913D51F88099F00ED350C /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF913D41F88099F00ED350C /* FirstViewController.swift */; };
-		CDF913D71F88099F00ED350C /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF913D61F88099F00ED350C /* SecondViewController.swift */; };
+		CDF913D51F88099F00ED350C /* scanQRcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF913D41F88099F00ED350C /* scanQRcode.swift */; };
+		CDF913D71F88099F00ED350C /* listofallmachines.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF913D61F88099F00ED350C /* listofallmachines.swift */; };
 		CDF913DA1F88099F00ED350C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF913D81F88099F00ED350C /* Main.storyboard */; };
 		CDF913DC1F88099F00ED350C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CDF913DB1F88099F00ED350C /* Assets.xcassets */; };
 		CDF913DF1F88099F00ED350C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CDF913DD1F88099F00ED350C /* LaunchScreen.storyboard */; };
@@ -37,8 +37,8 @@
 /* Begin PBXFileReference section */
 		CDF913CF1F88099F00ED350C /* GymMachineAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymMachineAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF913D21F88099F00ED350C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		CDF913D41F88099F00ED350C /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		CDF913D61F88099F00ED350C /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		CDF913D41F88099F00ED350C /* scanQRcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scanQRcode.swift; sourceTree = "<group>"; };
+		CDF913D61F88099F00ED350C /* listofallmachines.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = listofallmachines.swift; sourceTree = "<group>"; };
 		CDF913D91F88099F00ED350C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CDF913DB1F88099F00ED350C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CDF913DE1F88099F00ED350C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -100,8 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				CDF913D21F88099F00ED350C /* AppDelegate.swift */,
-				CDF913D41F88099F00ED350C /* FirstViewController.swift */,
-				CDF913D61F88099F00ED350C /* SecondViewController.swift */,
+				CDF913D41F88099F00ED350C /* scanQRcode.swift */,
+				CDF913D61F88099F00ED350C /* listofallmachines.swift */,
 				CDF913D81F88099F00ED350C /* Main.storyboard */,
 				CDF913DB1F88099F00ED350C /* Assets.xcassets */,
 				CDF913DD1F88099F00ED350C /* LaunchScreen.storyboard */,
@@ -259,9 +259,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CDF913D71F88099F00ED350C /* SecondViewController.swift in Sources */,
+				CDF913D71F88099F00ED350C /* listofallmachines.swift in Sources */,
 				CDF913D31F88099F00ED350C /* AppDelegate.swift in Sources */,
-				CDF913D51F88099F00ED350C /* FirstViewController.swift in Sources */,
+				CDF913D51F88099F00ED350C /* scanQRcode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +522,7 @@
 				CDF913FB1F88099F00ED350C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDF913FC1F88099F00ED350C /* Build configuration list for PBXNativeTarget "GymMachineAssistantTests" */ = {
 			isa = XCConfigurationList;
@@ -530,6 +531,7 @@
 				CDF913FE1F88099F00ED350C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CDF913FF1F88099F00ED350C /* Build configuration list for PBXNativeTarget "GymMachineAssistantUITests" */ = {
 			isa = XCConfigurationList;
@@ -538,6 +540,7 @@
 				CDF914011F88099F00ED350C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

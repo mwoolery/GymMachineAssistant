@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  SecondViewController.swift
 //  GymMachineAssistant
 //
 //  Created by Woolery,Matthew A on 10/6/17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FirstViewController: UIViewController {
+class listofallmachines : UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
