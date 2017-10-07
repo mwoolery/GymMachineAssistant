@@ -9,6 +9,8 @@
 import UIKit
 
 class listofallmachines : UIViewController {
+    
+    let xyz = "Test"
 
     override func viewDidLoad() {
         super.viewDidLoad()
