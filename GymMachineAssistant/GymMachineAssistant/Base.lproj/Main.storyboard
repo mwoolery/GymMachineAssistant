@@ -21,10 +21,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ir9-T8-n1P">
-                                <rect key="frame" x="84" y="282" width="160" height="30"/>
+                                <rect key="frame" x="160" y="450" width="54" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Press to Scan QR Code"/>
+                                <state key="normal" title="Camera"/>
                                 <connections>
+                                    <action selector="camera:" destination="9pv-A4-QxB" eventType="touchUpInside" id="3kP-nQ-zWj"/>
                                     <action selector="scanQR:" destination="9pv-A4-QxB" eventType="touchUpInside" id="psD-Br-LrU"/>
                                 </connections>
                             </button>
