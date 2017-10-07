@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0DE3BB011F8862C200359D48 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3BB001F8862C200359D48 /* MapViewController.swift */; };
+		0DE3BB031F8863B100359D48 /* MachineviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3BB021F8863B100359D48 /* MachineviewViewController.swift */; };
 		CDF913D31F88099F00ED350C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF913D21F88099F00ED350C /* AppDelegate.swift */; };
 		CDF913D51F88099F00ED350C /* scanQRcode.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF913D41F88099F00ED350C /* scanQRcode.swift */; };
 		CDF913D71F88099F00ED350C /* listofallmachines.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF913D61F88099F00ED350C /* listofallmachines.swift */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		0DE3BB001F8862C200359D48 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
+		0DE3BB021F8863B100359D48 /* MachineviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineviewViewController.swift; sourceTree = "<group>"; };
 		CDF913CF1F88099F00ED350C /* GymMachineAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymMachineAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF913D21F88099F00ED350C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDF913D41F88099F00ED350C /* scanQRcode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = scanQRcode.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				CDF913D41F88099F00ED350C /* scanQRcode.swift */,
 				CDF913D61F88099F00ED350C /* listofallmachines.swift */,
 				CDF913D81F88099F00ED350C /* Main.storyboard */,
+				0DE3BB021F8863B100359D48 /* MachineviewViewController.swift */,
 				CDF913DB1F88099F00ED350C /* Assets.xcassets */,
 				CDF913DD1F88099F00ED350C /* LaunchScreen.storyboard */,
 				CDF913E01F88099F00ED350C /* Info.plist */,
@@ -265,6 +268,7 @@
 				CDF913D71F88099F00ED350C /* listofallmachines.swift in Sources */,
 				CDF913D31F88099F00ED350C /* AppDelegate.swift in Sources */,
 				CDF913D51F88099F00ED350C /* scanQRcode.swift in Sources */,
+				0DE3BB031F8863B100359D48 /* MachineviewViewController.swift in Sources */,
 				0DE3BB011F8862C200359D48 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
