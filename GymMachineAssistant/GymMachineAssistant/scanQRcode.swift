@@ -12,8 +12,22 @@ class scanQRcode : UIViewController, UIImagePickerControllerDelegate, UINavigati
 
     
     
-   
+    @IBOutlet weak var image: UIImageView!
     @IBAction func cameraScan(_ sender: UIButton) {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)
+        {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
+            
+            imagePicker.allowsEditing = false
+            self.present(imagePicker, animated: true, completion: nil)
+            
+            
+        }
+    }
+    
+   /* @IBAction func cameraScan(_ sender: UIButton) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)
         {
             let imagePicker = UIImagePickerController()
@@ -27,7 +41,7 @@ class scanQRcode : UIViewController, UIImagePickerControllerDelegate, UINavigati
         }
     
     }
-    
+    */
     
     override func viewDidLoad() {
         super.viewDidLoad()
