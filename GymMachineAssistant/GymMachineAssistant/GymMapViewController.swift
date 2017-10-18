@@ -1,14 +1,14 @@
 //
-//  MachineviewViewController.swift
+//  GymMapViewController.swift
 //  GymMachineAssistant
 //
-//  Created by Kalvakota,Vaishnavi on 10/6/17.
+//  Created by Woolery,Matthew A on 10/18/17.
 //  Copyright © 2017 Woolery,Matthew A. All rights reserved.
 //
 
 import UIKit
 
-class MachineviewViewController: UIViewController {
+class GymMapViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -19,7 +19,7 @@ class MyTableViewCell : UITableViewCell {
     }
 }
 
-class listofallmachines: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class MachineListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     let machines = ["bench", "squat", "fly", "dips"]

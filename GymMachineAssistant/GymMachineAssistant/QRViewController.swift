@@ -8,7 +8,7 @@
 
 import UIKit
 
-class scanQRcode : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class QRViewController : UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     
     
