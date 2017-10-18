@@ -56,13 +56,31 @@
                     <view key="view" contentMode="scaleToFill" id="9iR-n4-Qi9">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="RFM-tS-gDZ">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="Yt1-lM-T7b"/>
+                                    <constraint firstAttribute="height" constant="618" id="oQ4-XT-WED"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RFM-tS-gDZ" firstAttribute="top" secondItem="9iR-n4-Qi9" secondAttribute="top" id="2dK-zK-J5S"/>
+                            <constraint firstItem="Uwt-1E-GbQ" firstAttribute="top" secondItem="RFM-tS-gDZ" secondAttribute="bottom" id="4HO-8d-KIC"/>
+                            <constraint firstAttribute="trailing" secondItem="RFM-tS-gDZ" secondAttribute="trailing" id="RHh-9U-eUq"/>
+                            <constraint firstItem="RFM-tS-gDZ" firstAttribute="leading" secondItem="9iR-n4-Qi9" secondAttribute="leading" id="yVy-uE-jvE"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Gym Map" id="e9m-ii-RD5"/>
+                    <connections>
+                        <outlet property="GymIV" destination="RFM-tS-gDZ" id="4V8-Vf-atK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ajl-Lg-nEu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="65" y="696"/>
+            <point key="canvasLocation" x="64.799999999999997" y="694.90254872563719"/>
         </scene>
         <!--Machine View-->
         <scene sceneID="pgF-CF-ot9">

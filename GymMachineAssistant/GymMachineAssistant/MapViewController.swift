@@ -9,10 +9,13 @@
 import UIKit
 
 class MapViewController: UIViewController {
-
+    
+    
+    @IBOutlet weak var GymIV: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        let image : UIImage = UIImage(named:"Foster Fitness Center.jpg")!
+        GymIV.image = image
         // Do any additional setup after loading the view.
     }
 

@@ -10,6 +10,7 @@
 		0DE3BB011F8862C200359D48 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3BB001F8862C200359D48 /* MapViewController.swift */; };
 		0DE3BB031F8863B100359D48 /* MachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3BB021F8863B100359D48 /* MachineViewController.swift */; };
 		CD67F21D1F97F8B0008720B1 /* GymMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD67F21C1F97F8B0008720B1 /* GymMapViewController.swift */; };
+		CD67F2201F97FCF2008720B1 /* Foster Fitness Center.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CD67F21F1F97FCF2008720B1 /* Foster Fitness Center.jpg */; };
 		CDF913D31F88099F00ED350C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF913D21F88099F00ED350C /* AppDelegate.swift */; };
 		CDF913D51F88099F00ED350C /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF913D41F88099F00ED350C /* QRViewController.swift */; };
 		CDF913D71F88099F00ED350C /* MachineListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF913D61F88099F00ED350C /* MachineListViewController.swift */; };
@@ -41,6 +42,7 @@
 		0DE3BB001F8862C200359D48 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0DE3BB021F8863B100359D48 /* MachineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineViewController.swift; sourceTree = "<group>"; };
 		CD67F21C1F97F8B0008720B1 /* GymMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymMapViewController.swift; sourceTree = "<group>"; };
+		CD67F21F1F97FCF2008720B1 /* Foster Fitness Center.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = "Foster Fitness Center.jpg"; path = "../../../../../Desktop/Foster Fitness Center.jpg"; sourceTree = "<group>"; };
 		CDF913CF1F88099F00ED350C /* GymMachineAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymMachineAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF913D21F88099F00ED350C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CDF913D41F88099F00ED350C /* QRViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD67F21E1F97FCD7008720B1 /* Gym Images */ = {
+			isa = PBXGroup;
+			children = (
+				CD67F21F1F97FCF2008720B1 /* Foster Fitness Center.jpg */,
+			);
+			path = "Gym Images";
+			sourceTree = "<group>";
+		};
 		CDF913C61F88099F00ED350C = {
 			isa = PBXGroup;
 			children = (
@@ -105,6 +115,7 @@
 		CDF913D11F88099F00ED350C /* GymMachineAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				CD67F21E1F97FCD7008720B1 /* Gym Images */,
 				CDF913D21F88099F00ED350C /* AppDelegate.swift */,
 				CDF913D41F88099F00ED350C /* QRViewController.swift */,
 				CDF913D61F88099F00ED350C /* MachineListViewController.swift */,
@@ -241,6 +252,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CD67F2201F97FCF2008720B1 /* Foster Fitness Center.jpg in Resources */,
 				CDF913DF1F88099F00ED350C /* LaunchScreen.storyboard in Resources */,
 				CDF913DC1F88099F00ED350C /* Assets.xcassets in Resources */,
 				CDF913DA1F88099F00ED350C /* Main.storyboard in Resources */,
