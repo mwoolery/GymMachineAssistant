@@ -13,7 +13,7 @@ import Foundation
 class Machine{
     
     var name:String
-    var muscleGroupWorked:[MuscleGroup]
+    var muscleGroupWorked:[String]
     //location number if we decide to change from QR to numbering system.
     var location: Int
     // Use a means of QR code association if we go this route
@@ -21,7 +21,7 @@ class Machine{
     // machineType would either be cardio or weight depending on machines intended purpose
     var machineType:String
     
-    init(name:String, muscleGroupWorked:[MuscleGroup], location:Int, machineType:String){
+    init(_ name:String,_ muscleGroupWorked:[String],_ location:Int,_ machineType:String){
         self.name = name
         self.muscleGroupWorked = muscleGroupWorked
         self.location = location

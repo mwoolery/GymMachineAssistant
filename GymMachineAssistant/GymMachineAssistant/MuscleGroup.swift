@@ -10,6 +10,11 @@ import Foundation
 
 struct MuscleGroup{
     var name:String
+    
+    init(_ name: String){
+        self.name = name
+    }
+    
 }
 
 //use to define which muscles are worked by machine
