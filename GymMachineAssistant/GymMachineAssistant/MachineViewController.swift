@@ -8,6 +8,7 @@
 
 import UIKit
 
+// may not actually need this view controller
 class MachineViewController: UIViewController {
 
     override func viewDidLoad() {
