@@ -10,7 +10,13 @@ import Foundation
 
 
 
-class Machine{
+class Machine: CustomStringConvertible{
+    var description: String{
+        return "\(name),\(muscleGroupWorked),\(location),\(machineType)"
+    }
+    
+    
+    
     
     var name:String
     var muscleGroupWorked:[String]
@@ -35,6 +41,18 @@ class Machine{
     // use this to get a video to demonstrate how this machine would work, may or may not be added.
     func getVideoString(name:String)->String{
         return "\(name).mov"
+    }
+    func getName()->String{
+        return name
+    }
+    func getMuscleGroupWorked()->[String]{
+        return muscleGroupWorked
+    }
+    func getLocation()->Int{
+        return location
+    }
+    func getMachineType()->String{
+        return machineType
     }
     
     

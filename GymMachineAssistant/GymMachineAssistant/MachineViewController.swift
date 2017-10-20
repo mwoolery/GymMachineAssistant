@@ -10,10 +10,25 @@ import UIKit
 
 // may not actually need this view controller
 class MachineViewController: UIViewController {
-
+    
+    //var machine = Machine!
+    
+    @IBOutlet weak var machineNameLBL: UILabel!
+    
+    @IBOutlet weak var locationNumberLBL: UILabel!
+    
+    @IBOutlet weak var exerciseTypeLBL: UILabel!
+    
+    @IBOutlet weak var muscleGroupLBL: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        //machineNameLBL.text = machine
+        //locationNumberLBL.text =
+        //exerciseTypeLBL.text = machine.
+        
+        //muscleGroupLBL.text = machine.getMuscleGroupWorked(<#T##Machine#>)()
+        
         // Do any additional setup after loading the view.
     }
 

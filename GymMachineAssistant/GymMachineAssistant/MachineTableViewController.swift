@@ -46,7 +46,7 @@ class MachineTableViewController: UITableViewController {
     // makes the individual birds controller
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         let machineVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "machine_view_controller") as! MachineViewController
-        //machineVC.machine = Gym.machineList[indexPath.row]
+        //machineVC = Gym.machineList[indexPath.row]
         self.navigationController?.pushViewController(machineVC, animated: true)
     }
    
