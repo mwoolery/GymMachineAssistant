@@ -16,7 +16,7 @@ class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // not working in swift 3, we had to run swift 3 on checked out macs
+// not working in swift 3, we had to run swift 3 on checked out macs
 //        view.backgroundColor = UIColor.black
 //        captureSession = AVCaptureSession()
 //        
