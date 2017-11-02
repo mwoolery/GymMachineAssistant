@@ -8,18 +8,12 @@
 
 import UIKit
 
-
-
 class MachineTableViewController: UITableViewController {
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.register(MachineTableViewCell.self, forCellReuseIdentifier: "machine_cell")
-        
-        
-        
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -29,10 +23,8 @@ class MachineTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        
         return Gym.machineList.count
     }
-    
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "machine_cell", for: indexPath)
@@ -46,7 +38,7 @@ class MachineTableViewController: UITableViewController {
     // makes the individual birds controller
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         let machineVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "machine_view_controller") as! MachineViewController
-        //machineVC = Gym.machineList[indexPath.row]
+       machineVC.machine = Gym.machineList[indexPath.row]
         self.navigationController?.pushViewController(machineVC, animated: true)
     }
    

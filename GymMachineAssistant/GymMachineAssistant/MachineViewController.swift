@@ -11,7 +11,7 @@ import UIKit
 // may not actually need this view controller
 class MachineViewController: UIViewController {
     
-    //var machine = Machine!
+    var machine:Machine!
     
     @IBOutlet weak var machineNameLBL: UILabel!
     
@@ -21,14 +21,14 @@ class MachineViewController: UIViewController {
     
     @IBOutlet weak var muscleGroupLBL: UILabel!
     
+    @IBOutlet weak var machineImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //machineNameLBL.text = machine
-        //locationNumberLBL.text =
-        //exerciseTypeLBL.text = machine.
-        
-        //muscleGroupLBL.text = machine.getMuscleGroupWorked(<#T##Machine#>)()
-        
+        machineNameLBL.text = machine.getName()
+        locationNumberLBL.text = "\(machine.getLocation())"
+        exerciseTypeLBL.text = machine.getMachineType()
+        muscleGroupLBL.text = machine.getMuscleGroupWorked()[0]
+        machineImage.image = UIImage(named: "\(machine.getName()).jpg")
         // Do any additional setup after loading the view.
     }
 

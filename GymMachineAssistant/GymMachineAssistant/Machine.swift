@@ -14,10 +14,6 @@ class Machine: CustomStringConvertible{
     var description: String{
         return "\(name),\(muscleGroupWorked),\(location),\(machineType)"
     }
-    
-    
-    
-    
     var name:String
     var muscleGroupWorked:[String]
     //location number if we decide to change from QR to numbering system.
