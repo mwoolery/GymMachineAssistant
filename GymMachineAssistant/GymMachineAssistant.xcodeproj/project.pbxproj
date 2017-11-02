@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0DA0A5A91FABD60F001B7EFC /* GymMapLoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0A5A81FABD60F001B7EFC /* GymMapLoc.swift */; };
 		0DE3BB011F8862C200359D48 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3BB001F8862C200359D48 /* MapViewController.swift */; };
 		0DE3BB031F8863B100359D48 /* MachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3BB021F8863B100359D48 /* MachineViewController.swift */; };
 		8E26BA011FABADC80036687B /* Gym.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E26B9FF1FABADC80036687B /* Gym.xcdatamodeld */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0DA0A5A81FABD60F001B7EFC /* GymMapLoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymMapLoc.swift; sourceTree = "<group>"; };
 		0DE3BB001F8862C200359D48 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0DE3BB021F8863B100359D48 /* MachineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineViewController.swift; sourceTree = "<group>"; };
 		8E26BA001FABADC80036687B /* Gym.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gym.xcdatamodel; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				CDF913DD1F88099F00ED350C /* LaunchScreen.storyboard */,
 				CDF913E01F88099F00ED350C /* Info.plist */,
 				0DE3BB001F8862C200359D48 /* MapViewController.swift */,
+				0DA0A5A81FABD60F001B7EFC /* GymMapLoc.swift */,
 			);
 			path = GymMachineAssistant;
 			sourceTree = "<group>";
@@ -292,6 +295,7 @@
 				CD8A5F431F9A700F009392E2 /* Gym.swift in Sources */,
 				CD8A5F451F9A7076009392E2 /* Machine.swift in Sources */,
 				8E26BA011FABADC80036687B /* Gym.xcdatamodeld in Sources */,
+				0DA0A5A91FABD60F001B7EFC /* GymMapLoc.swift in Sources */,
 				0DE3BB011F8862C200359D48 /* MapViewController.swift in Sources */,
 				CD8A5F491F9A74E5009392E2 /* MachineTableViewCell.swift in Sources */,
 			);
