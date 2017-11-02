@@ -10,13 +10,13 @@ import MapKit
 
 class GymMapLoc:  NSObject, MKAnnotation{
     
-    var name: String?
-    var subName: String?
+    var title: String?
+    var subtitle: String?
     var coordinate: CLLocationCoordinate2D
     
-    init(name:String, subName: String, coordinate: CLLocationCoordinate2D) {
-        self.name = name
-        self.subName = subName
+    init(title:String, subtitle: String, coordinate: CLLocationCoordinate2D) {
+        self.title = title
+        self.subtitle = subtitle
         self.coordinate = coordinate
     }
 }

@@ -19,7 +19,7 @@ class MapViewController: UIViewController {
         let gymMapLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(40.3505584, -94.88488749999999)
         mapView.setRegion(MKCoordinateRegionMakeWithDistance(gymMapLocation, distance, distance), animated: true)
         
-        let gymPinLoc = GymMapLoc(name: "Student Recreation Center", subName: "Foster's Fitness Gym", coordinate: gymMapLocation )
+        let gymPinLoc = GymMapLoc(title: "Student Recreation Center", subtitle: "Foster's Fitness Gym", coordinate: gymMapLocation )
         mapView.addAnnotation(gymPinLoc)
         
         // Do any additional setup after loading the view.
