@@ -21,13 +21,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Scan QR Code" image="first" landscapeImage="QR" selectedImage="QR" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Scan QR Code" selectedImage="qrcodeicon" id="acW-dT-cKf"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1213.5999999999999" y="-336.88155922038982"/>
         </scene>
-        <!--Machine Table View Controller-->
+        <!--List of Machines-->
         <scene sceneID="zbn-fc-R0J">
             <objects>
                 <tableViewController id="OHR-Gh-HZP" customClass="MachineTableViewController" customModule="GymMachineAssistant" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,11 +50,11 @@
                             <outlet property="delegate" destination="OHR-Gh-HZP" id="L6N-wG-MuJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="S8o-ua-vhK"/>
+                    <navigationItem key="navigationItem" title="List of Machines" id="S8o-ua-vhK"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jE-Yc-0Z2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3058.4000000000001" y="412.44377811094455"/>
+            <point key="canvasLocation" x="3070" y="270"/>
         </scene>
         <!--Gym Map-->
         <scene sceneID="StG-H0-9PU">
@@ -105,18 +105,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lP-hL-FpN">
-                                <rect key="frame" x="170" y="318" width="34" height="30"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mapview" translatesAutoresizingMaskIntoConstraints="NO" id="ZOf-UM-FCw">
+                                <rect key="frame" x="0.0" y="64" width="375" height="295"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="View"/>
-                            </button>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Entrance" translatesAutoresizingMaskIntoConstraints="NO" id="FBq-fe-XKW">
+                                <rect key="frame" x="0.0" y="357" width="191" height="261"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fullView" translatesAutoresizingMaskIntoConstraints="NO" id="MZ3-c6-Zss">
+                                <rect key="frame" x="190" y="357" width="185" height="261"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bkb-TW-iJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1214" y="752"/>
+            <point key="canvasLocation" x="1213.5999999999999" y="751.57421289355329"/>
         </scene>
         <!--Machine View-->
         <scene sceneID="pgF-CF-ot9">
@@ -204,7 +211,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YGI-aR-zgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3748" y="411.544227886057"/>
+            <point key="canvasLocation" x="3759" y="269"/>
         </scene>
         <!--Foster's Fitness Center-->
         <scene sceneID="sqC-BS-lHc">
@@ -258,7 +265,7 @@
         <scene sceneID="CT1-b9-lqy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dXL-qO-iYW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Machines" image="QR" landscapeImage="QR" id="huJ-B2-hDi"/>
+                    <tabBarItem key="tabBarItem" title="Machines" image="QR" landscapeImage="QR" largeContentSizeImage="list" selectedImage="listicon" id="huJ-B2-hDi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Oh-ZN-hcV">
                         <autoresizingMask key="autoresizingMask"/>
@@ -276,7 +283,7 @@
         <scene sceneID="Weq-hS-gb1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1ic-CH-nfl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Gym Map" id="e9m-ii-RD5"/>
+                    <tabBarItem key="tabBarItem" title="Gym Map" image="QR" landscapeImage="QR" selectedImage="mapicon" id="e9m-ii-RD5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lwi-Me-3mX">
                         <autoresizingMask key="autoresizingMask"/>
@@ -293,7 +300,13 @@
     </scenes>
     <resources>
         <image name="Copy of Blue Fitness Instagram template" width="1080" height="1080"/>
+        <image name="Entrance" width="938" height="626"/>
         <image name="QR" width="20" height="20"/>
-        <image name="first" width="30" height="30"/>
+        <image name="fullView" width="952" height="630"/>
+        <image name="list" width="512" height="512"/>
+        <image name="listicon" width="16" height="16"/>
+        <image name="mapicon" width="16" height="16"/>
+        <image name="mapview" width="706" height="555"/>
+        <image name="qrcodeicon" width="16" height="16"/>
     </resources>
 </document>

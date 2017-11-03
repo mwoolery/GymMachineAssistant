@@ -12,7 +12,7 @@ class HomeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        let when = DispatchTime.now() + 4
+        let when = DispatchTime.now() + 2
         DispatchQueue.main.asyncAfter(deadline: when) {
             self.performSegue(withIdentifier: "navigateToTabs", sender: self)
         }
