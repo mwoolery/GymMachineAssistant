@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.19" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lVS-IV-hiD">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.16"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,7 +25,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="874.39999999999998" y="-336.88155922038982"/>
+            <point key="canvasLocation" x="1213.5999999999999" y="-336.88155922038982"/>
         </scene>
         <!--Machine Table View Controller-->
         <scene sceneID="zbn-fc-R0J">
@@ -54,7 +54,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jE-Yc-0Z2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2380" y="413"/>
+            <point key="canvasLocation" x="3058.4000000000001" y="412.44377811094455"/>
         </scene>
         <!--Gym Map-->
         <scene sceneID="StG-H0-9PU">
@@ -72,17 +72,51 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALA-cA-gUz">
+                                <rect key="frame" x="138" y="341" width="89" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Go to the pin"/>
+                                <connections>
+                                    <action selector="goToPin:" destination="8ue-K0-d3b" eventType="touchUpInside" id="A30-kP-i3J"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Gym Map" id="e9m-ii-RD5"/>
+                    <navigationItem key="navigationItem" title="Gym Map" id="m5R-6W-rOt"/>
                     <connections>
                         <outlet property="mapView" destination="t07-D0-Lb3" id="8I7-dS-Z1T"/>
+                        <segue destination="oJm-OJ-Iaa" kind="show" identifier="gymViewSegue" id="aDR-Y9-dbf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ajl-Lg-nEu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="117.59999999999999" y="711.99400299850083"/>
+            <point key="canvasLocation" x="455.19999999999999" y="751.57421289355329"/>
+        </scene>
+        <!--Gym Img View Controller-->
+        <scene sceneID="ich-5M-9ZE">
+            <objects>
+                <viewController id="oJm-OJ-Iaa" customClass="GymImgViewController" customModule="GymMachineAssistant" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="83Z-aV-GrV"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZC4-0f-vXR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="juw-kS-fGD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lP-hL-FpN">
+                                <rect key="frame" x="170" y="318" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="View"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Bkb-TW-iJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1214" y="752"/>
         </scene>
         <!--Machine View-->
         <scene sceneID="pgF-CF-ot9">
@@ -170,7 +204,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YGI-aR-zgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3071" y="412"/>
+            <point key="canvasLocation" x="3748" y="411.544227886057"/>
+        </scene>
+        <!--Foster's Fitness Center-->
+        <scene sceneID="sqC-BS-lHc">
+            <objects>
+                <viewController id="lVS-IV-hiD" customClass="HomeViewController" customModule="GymMachineAssistant" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="z4t-js-opk"/>
+                        <viewControllerLayoutGuide type="bottom" id="otv-wD-lYI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ePa-MA-4OO">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Copy of Blue Fitness Instagram template" translatesAutoresizingMaskIntoConstraints="NO" id="mIW-zj-umD">
+                                <rect key="frame" x="-0.18482959211712569" y="0.0" width="374.99999999999989" height="666.99999999999989"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.036460063433929046" green="0.35698181053003997" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Foster's Fitness Center" id="vOH-RW-QdB"/>
+                    <connections>
+                        <segue destination="49e-Tb-3d3" kind="showDetail" identifier="navigateToTabs" action="showViewController:sender:" id="yEa-O1-jfL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BPt-Ze-pVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-567.20000000000005" y="-27.436281859070466"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -184,13 +246,13 @@
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
-                        <segue destination="8ue-K0-d3b" kind="relationship" relationship="viewControllers" id="6bY-Uj-VY5"/>
+                        <segue destination="1ic-CH-nfl" kind="relationship" relationship="viewControllers" id="6bY-Uj-VY5"/>
                         <segue destination="dXL-qO-iYW" kind="relationship" relationship="viewControllers" id="zXS-xm-hol"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-164" y="-26"/>
+            <point key="canvasLocation" x="175.19999999999999" y="-26.53673163418291"/>
         </scene>
         <!--Machines-->
         <scene sceneID="CT1-b9-lqy">
@@ -199,7 +261,6 @@
                     <tabBarItem key="tabBarItem" title="Machines" image="QR" landscapeImage="QR" id="huJ-B2-hDi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Oh-ZN-hcV">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -209,10 +270,29 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uSX-e5-V5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1481" y="414"/>
+            <point key="canvasLocation" x="2236" y="270.31484257871068"/>
+        </scene>
+        <!--Gym Map-->
+        <scene sceneID="Weq-hS-gb1">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1ic-CH-nfl" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Gym Map" id="e9m-ii-RD5"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lwi-Me-3mX">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8ue-K0-d3b" kind="relationship" relationship="rootViewController" id="CYa-8F-6rh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1HM-OK-wB1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-311" y="752"/>
         </scene>
     </scenes>
     <resources>
+        <image name="Copy of Blue Fitness Instagram template" width="1080" height="1080"/>
         <image name="QR" width="20" height="20"/>
         <image name="first" width="30" height="30"/>
     </resources>

@@ -10,6 +10,8 @@
 		0DA0A5A91FABD60F001B7EFC /* GymMapLoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0A5A81FABD60F001B7EFC /* GymMapLoc.swift */; };
 		0DE3BB011F8862C200359D48 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3BB001F8862C200359D48 /* MapViewController.swift */; };
 		0DE3BB031F8863B100359D48 /* MachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3BB021F8863B100359D48 /* MachineViewController.swift */; };
+		3F0B79B51FABFED100E40A71 /* GymImgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0B79B41FABFED100E40A71 /* GymImgViewController.swift */; };
+		3F0B79B71FAC07D500E40A71 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0B79B61FAC07D500E40A71 /* HomeViewController.swift */; };
 		8E26BA011FABADC80036687B /* Gym.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E26B9FF1FABADC80036687B /* Gym.xcdatamodeld */; };
 		CD8A5F431F9A700F009392E2 /* Gym.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8A5F421F9A700F009392E2 /* Gym.swift */; };
 		CD8A5F451F9A7076009392E2 /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8A5F441F9A7076009392E2 /* Machine.swift */; };
@@ -45,6 +47,8 @@
 		0DA0A5A81FABD60F001B7EFC /* GymMapLoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymMapLoc.swift; sourceTree = "<group>"; };
 		0DE3BB001F8862C200359D48 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0DE3BB021F8863B100359D48 /* MachineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineViewController.swift; sourceTree = "<group>"; };
+		3F0B79B41FABFED100E40A71 /* GymImgViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymImgViewController.swift; sourceTree = "<group>"; };
+		3F0B79B61FAC07D500E40A71 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8E26BA001FABADC80036687B /* Gym.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gym.xcdatamodel; sourceTree = "<group>"; };
 		CD8A5F421F9A700F009392E2 /* Gym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gym.swift; sourceTree = "<group>"; };
 		CD8A5F441F9A7076009392E2 /* Machine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
@@ -126,8 +130,10 @@
 				CD8A5F481F9A74E5009392E2 /* MachineTableViewCell.swift */,
 				CD8A5F441F9A7076009392E2 /* Machine.swift */,
 				CDF913D41F88099F00ED350C /* QRViewController.swift */,
+				3F0B79B41FABFED100E40A71 /* GymImgViewController.swift */,
 				CDF913D61F88099F00ED350C /* MachineTableViewController.swift */,
 				CDF913D81F88099F00ED350C /* Main.storyboard */,
+				3F0B79B61FAC07D500E40A71 /* HomeViewController.swift */,
 				8E26B9FF1FABADC80036687B /* Gym.xcdatamodeld */,
 				0DE3BB021F8863B100359D48 /* MachineViewController.swift */,
 				CDF913DB1F88099F00ED350C /* Assets.xcassets */,
@@ -297,7 +303,9 @@
 				8E26BA011FABADC80036687B /* Gym.xcdatamodeld in Sources */,
 				0DA0A5A91FABD60F001B7EFC /* GymMapLoc.swift in Sources */,
 				0DE3BB011F8862C200359D48 /* MapViewController.swift in Sources */,
+				3F0B79B51FABFED100E40A71 /* GymImgViewController.swift in Sources */,
 				CD8A5F491F9A74E5009392E2 /* MachineTableViewCell.swift in Sources */,
+				3F0B79B71FAC07D500E40A71 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
