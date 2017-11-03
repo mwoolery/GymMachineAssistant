@@ -15,7 +15,8 @@ class Machine: CustomStringConvertible{
         return "\(name),\(muscleGroupWorked),\(location),\(machineType)"
     }
     var name:String
-    var muscleGroupWorked:[String]
+    var muscleGroupWorked:String
+    // ["something", "Another"]   "something, another" an
     //location number if we decide to change from QR to numbering system.
     var location: Int
     // Use a means of QR code association if we go this route
@@ -23,7 +24,7 @@ class Machine: CustomStringConvertible{
     // machineType would either be cardio or weight depending on machines intended purpose
     var machineType:String
     
-    init(_ name:String,_ muscleGroupWorked:[String],_ location:Int,_ machineType:String){
+    init(_ name:String,_ muscleGroupWorked:String,_ location:Int,_ machineType:String){
         self.name = name
         self.muscleGroupWorked = muscleGroupWorked
         self.location = location
@@ -41,7 +42,7 @@ class Machine: CustomStringConvertible{
     func getName()->String{
         return name
     }
-    func getMuscleGroupWorked()->[String]{
+    func getMuscleGroupWorked()->String{
         return muscleGroupWorked
     }
     func getLocation()->Int{

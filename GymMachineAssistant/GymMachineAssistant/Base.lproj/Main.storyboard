@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="1213.5999999999999" y="-336.88155922038982"/>
         </scene>
-        <!--List of Machines-->
+        <!--SearchBar-->
         <scene sceneID="zbn-fc-R0J">
             <objects>
                 <tableViewController id="OHR-Gh-HZP" customClass="MachineTableViewController" customModule="GymMachineAssistant" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,9 +50,20 @@
                             <outlet property="delegate" destination="OHR-Gh-HZP" id="L6N-wG-MuJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="List of Machines" id="S8o-ua-vhK"/>
+                    <navigationItem key="navigationItem" title="SearchBar" id="VVQ-4R-tbF" userLabel="SearchBar"/>
+                    <connections>
+                        <outlet property="searchDisplayController" destination="v5q-Yk-aSd" id="Fw2-Ed-1yz"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jE-Yc-0Z2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <searchDisplayController id="v5q-Yk-aSd">
+                    <connections>
+                        <outlet property="delegate" destination="OHR-Gh-HZP" id="htA-1X-AgM"/>
+                        <outlet property="searchContentsController" destination="OHR-Gh-HZP" id="QWn-gy-9RQ"/>
+                        <outlet property="searchResultsDataSource" destination="OHR-Gh-HZP" id="fVV-De-tnT"/>
+                        <outlet property="searchResultsDelegate" destination="OHR-Gh-HZP" id="0jV-AC-Kdq"/>
+                    </connections>
+                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="3070" y="270"/>
         </scene>

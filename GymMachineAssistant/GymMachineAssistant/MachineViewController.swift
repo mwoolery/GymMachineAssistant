@@ -27,7 +27,7 @@ class MachineViewController: UIViewController {
         machineNameLBL.text = machine.getName()
         locationNumberLBL.text = "\(machine.getLocation())"
         exerciseTypeLBL.text = machine.getMachineType()
-        muscleGroupLBL.text = machine.getMuscleGroupWorked()[0]
+        muscleGroupLBL.text = machine.getMuscleGroupWorked()
         machineImage.image = UIImage(named: "\(machine.getName()).jpg")
         // Do any additional setup after loading the view.
     }
