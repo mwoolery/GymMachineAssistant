@@ -23,6 +23,13 @@ class CoreDataModel {
         gym0.latitude = 40.3505584
         gym0.longitude = -94.88488749999999
         
+        let gym1 = NSEntityDescription.insertNewObject(forEntityName: "Gym",into: moc) as! Gym
+        gym1.name = "Title Town Gym"
+        
+        gym1.latitude = 40.331034
+        gym1.longitude = -94.874796
+        
+        
         let machine00 = NSEntityDescription.insertNewObject(forEntityName: "Machine",into: moc)as! Machine
         // use name for video string and image string
         machine00.name = "Chest Fly"
@@ -116,7 +123,7 @@ class CoreDataModel {
         }
         
     }
-    
+    // For Machine VC
     static func fetchAllItems() ->[Machine]{
         let moc = (UIApplication.shared.delegate as!
             AppDelegate).persistentContainer.viewContext
@@ -133,6 +140,25 @@ class CoreDataModel {
         }
         return machines
     }
+    
+    // For Map VC
+    static func fetchAllGyms() ->[Gym]{
+        let moc = (UIApplication.shared.delegate as!
+            AppDelegate).persistentContainer.viewContext
+        var gyms = [Gym]()
+        do {
+            let fetchRequest:NSFetchRequest<Gym> = NSFetchRequest(entityName: "Gym")
+            gyms =
+                try moc.fetch(fetchRequest)
+            for _ in gyms {
+                //print(post.title!, post.content!, post.blog?.name! ?? "No Name")
+            }
+        } catch {
+            print("Error when trying to fetch: \(error)")
+        }
+        return gyms
+    }
+    
     
     static func fetchSomeItems(){
         
