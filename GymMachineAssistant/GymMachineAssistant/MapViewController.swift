@@ -24,7 +24,7 @@ class MapViewController: UIViewController {
         super.viewDidLoad()
         //CoreDataModel.doCoreData()
         let myGyms = CoreDataModel.fetchAllGyms()
-        let distance:CLLocationDegrees = 2000
+        let distance:CLLocationDegrees = 5000
         //CLLocationCoordinate2D(latitude: 40, longitude: 40)
         for i in myGyms{
         let gymMapLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(i.latitude, i.longitude)
