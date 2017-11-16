@@ -20,6 +20,7 @@ class MapViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         let distance:CLLocationDegrees = 2000
+        //CLLocationCoordinate2D(latitude: 40, longitude: 40)
         let gymMapLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(40.3505584, -94.88488749999999)
         mapView.setRegion(MKCoordinateRegionMakeWithDistance(gymMapLocation, distance, distance), animated: true)
         

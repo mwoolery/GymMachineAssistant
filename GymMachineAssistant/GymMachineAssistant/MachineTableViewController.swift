@@ -21,12 +21,17 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
     @IBOutlet var machinesTV: UITableView!
     
     
-    let initialDataAry:[Machine] = Gym.machineList
-    var dataAry:[Machine] = Gym.machineList
+    
+    static let myMachines = CoreDataModel.fetchAllItems()
+    let initialDataAry:[Machine] = myMachines
+    var dataAry:[Machine] = myMachines
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.searchBarSetup()
+        
+        //CoreDataModel.doCoreData()
+        
         //machinesTV.register(MachineTableViewCell.self,forCellReuseIdentifier: "machine_cell")
     }
     
@@ -56,8 +61,8 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
             //fix of not searching when backspacing
             
             dataAry = initialDataAry.filter({ (mod) -> Bool in
-                print ("\(mod.name.lowercased()) : \(text.lowercased()) \(mod.name.lowercased().contains(text.lowercased()))")
-                return mod.name.lowercased().contains(text.lowercased())
+                print ("\(String(describing: mod.name?.lowercased())) : \(text.lowercased()) \(String(describing: mod.name?.lowercased().contains(text.lowercased())))")
+                return mod.name!.lowercased().contains(text.lowercased())
             })
             print(dataAry)
             print("reload please")
@@ -65,13 +70,13 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
         case selectedScope.muscleGroupWorked.rawValue:
             //fix of not searching when backspacing
             dataAry = initialDataAry.filter({ (mod) -> Bool in
-                return mod.muscleGroupWorked.lowercased().contains(text.lowercased())
+                return (mod.muscleGroupWorked?.lowercased().contains(text.lowercased()))!
             })
             machinesTV.reloadData()
         case selectedScope.location.rawValue:
             //fix of not searching when backspacing
             dataAry = initialDataAry.filter({ (mod) -> Bool in
-                return mod.location == Int(text)
+                return Int(mod.location) == Int(text)
             })
             machinesTV.reloadData()
         default:
@@ -106,10 +111,10 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "machine_cell", for: indexPath)
-        
+        let imgName = dataAry[indexPath.row].name!
         cell.textLabel?.text = dataAry[indexPath.row].name
         cell.detailTextLabel?.text = dataAry[indexPath.row].machineType
-        cell.imageView?.image = UIImage(named: "\(dataAry[indexPath.row].name).jpg")
+        cell.imageView?.image = UIImage(named: "\(imgName).jpg")
         return cell
     }
     
