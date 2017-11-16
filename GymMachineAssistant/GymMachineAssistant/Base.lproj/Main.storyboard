@@ -52,6 +52,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="SearchBar" id="VVQ-4R-tbF" userLabel="SearchBar"/>
                     <connections>
+                        <outlet property="machinesTV" destination="jzf-HE-o39" id="ezJ-Hi-LVP"/>
                         <outlet property="searchDisplayController" destination="v5q-Yk-aSd" id="Fw2-Ed-1yz"/>
                     </connections>
                 </tableViewController>

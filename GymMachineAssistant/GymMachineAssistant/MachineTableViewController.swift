@@ -18,7 +18,8 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
 
     
     
-  
+    @IBOutlet var machinesTV: UITableView!
+    
     
     let initialDataAry:[Machine] = Gym.machineList
     var dataAry:[Machine] = Gym.machineList
@@ -26,7 +27,7 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.searchBarSetup()
-        tableView.register(MachineTableViewCell.self,forCellReuseIdentifier: "machine_cell")
+        //machinesTV.register(MachineTableViewCell.self,forCellReuseIdentifier: "machine_cell")
     }
     
     func searchBarSetup() {
@@ -35,7 +36,7 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
         searchBar.scopeButtonTitles = ["name","muscleGroupWorked","location"]
         searchBar.selectedScopeButtonIndex = 0
         searchBar.delegate = self
-        self.tableView.tableHeaderView = searchBar
+        machinesTV.tableHeaderView = searchBar
     }
     
     // MARK: - search bar delegate
@@ -43,7 +44,7 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
         print(searchText)
         if searchText.isEmpty {
             dataAry = initialDataAry
-            self.tableView.reloadData()
+            machinesTV.reloadData()
         }else {
             filterTableView(ind: searchBar.selectedScopeButtonIndex,text: searchText)
         }
@@ -58,20 +59,21 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
                 print ("\(mod.name.lowercased()) : \(text.lowercased()) \(mod.name.lowercased().contains(text.lowercased()))")
                 return mod.name.lowercased().contains(text.lowercased())
             })
+            print(dataAry)
             print("reload please")
-            self.tableView.reloadData()
+            machinesTV.reloadData()
         case selectedScope.muscleGroupWorked.rawValue:
             //fix of not searching when backspacing
             dataAry = initialDataAry.filter({ (mod) -> Bool in
                 return mod.muscleGroupWorked.lowercased().contains(text.lowercased())
             })
-            self.tableView.reloadData()
+            machinesTV.reloadData()
         case selectedScope.location.rawValue:
             //fix of not searching when backspacing
             dataAry = initialDataAry.filter({ (mod) -> Bool in
                 return mod.location == Int(text)
             })
-            self.tableView.reloadData()
+            machinesTV.reloadData()
         default:
             print("no type")
         }
@@ -99,28 +101,28 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
 //            return 0
 //        }
         
-        return Gym.machineList.count
+        return dataAry.count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "machine_cell", for: indexPath)
         
-        cell.textLabel?.text = Gym.machineList[indexPath.row].name
-        cell.detailTextLabel?.text = Gym.machineList[indexPath.row].machineType
-        cell.imageView?.image = UIImage(named: "\(Gym.machineList[indexPath.row].name).jpg")
+        cell.textLabel?.text = dataAry[indexPath.row].name
+        cell.detailTextLabel?.text = dataAry[indexPath.row].machineType
+        cell.imageView?.image = UIImage(named: "\(dataAry[indexPath.row].name).jpg")
         return cell
     }
     
     // makes the individual birds controller
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         let machineVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "machine_view_controller") as! MachineViewController
-       machineVC.machine = Gym.machineList[indexPath.row]
+       machineVC.machine = dataAry[indexPath.row]
         self.navigationController?.pushViewController(machineVC, animated: true)
     }
    
     // refreshes the data each visit
     override func viewWillAppear(_ animated: Bool) {
-        
+        tableView.reloadData()
     }
     
     override func didReceiveMemoryWarning() {
