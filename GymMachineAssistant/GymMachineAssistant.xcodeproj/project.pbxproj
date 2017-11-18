@@ -12,6 +12,7 @@
 		0DE3BB031F8863B100359D48 /* MachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3BB021F8863B100359D48 /* MachineViewController.swift */; };
 		3F0B79B51FABFED100E40A71 /* GymImgViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0B79B41FABFED100E40A71 /* GymImgViewController.swift */; };
 		3F0B79B71FAC07D500E40A71 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0B79B61FAC07D500E40A71 /* HomeViewController.swift */; };
+		3FF0802D1FBFD6A900E47502 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3FF0802C1FBFD6A900E47502 /* ViewController.swift */; };
 		8E26BA011FABADC80036687B /* Gym.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E26B9FF1FABADC80036687B /* Gym.xcdatamodeld */; };
 		CD8A5F431F9A700F009392E2 /* Gym.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8A5F421F9A700F009392E2 /* Gym.swift */; };
 		CD8A5F451F9A7076009392E2 /* Machine.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8A5F441F9A7076009392E2 /* Machine.swift */; };
@@ -50,6 +51,7 @@
 		0DE3BB021F8863B100359D48 /* MachineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineViewController.swift; sourceTree = "<group>"; };
 		3F0B79B41FABFED100E40A71 /* GymImgViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymImgViewController.swift; sourceTree = "<group>"; };
 		3F0B79B61FAC07D500E40A71 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		3FF0802C1FBFD6A900E47502 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8E26BA001FABADC80036687B /* Gym.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gym.xcdatamodel; sourceTree = "<group>"; };
 		CD8A5F421F9A700F009392E2 /* Gym.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Gym.swift; sourceTree = "<group>"; };
 		CD8A5F441F9A7076009392E2 /* Machine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Machine.swift; sourceTree = "<group>"; };
@@ -132,6 +134,7 @@
 				CD8A5F481F9A74E5009392E2 /* MachineTableViewCell.swift */,
 				CD8A5F441F9A7076009392E2 /* Machine.swift */,
 				CDF913D41F88099F00ED350C /* QRViewController.swift */,
+				3FF0802C1FBFD6A900E47502 /* ViewController.swift */,
 				CDC1FBB11FBE2C95004C4C0E /* CoreDataModel.swift */,
 				3F0B79B41FABFED100E40A71 /* GymImgViewController.swift */,
 				CDF913D61F88099F00ED350C /* MachineTableViewController.swift */,
@@ -301,6 +304,7 @@
 				CDF913D31F88099F00ED350C /* AppDelegate.swift in Sources */,
 				CDF913D51F88099F00ED350C /* QRViewController.swift in Sources */,
 				0DE3BB031F8863B100359D48 /* MachineViewController.swift in Sources */,
+				3FF0802D1FBFD6A900E47502 /* ViewController.swift in Sources */,
 				CD8A5F431F9A700F009392E2 /* Gym.swift in Sources */,
 				CDC1FBB21FBE2C95004C4C0E /* CoreDataModel.swift in Sources */,
 				CD8A5F451F9A7076009392E2 /* Machine.swift in Sources */,
@@ -471,7 +475,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 583N2DJ8B2;
+				DEVELOPMENT_TEAM = 73W843G446;
 				INFOPLIST_FILE = GymMachineAssistant/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -486,7 +490,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 583N2DJ8B2;
+				DEVELOPMENT_TEAM = 73W843G446;
 				INFOPLIST_FILE = GymMachineAssistant/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

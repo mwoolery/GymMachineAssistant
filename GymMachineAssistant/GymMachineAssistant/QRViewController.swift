@@ -9,54 +9,73 @@
 import UIKit
 import AVFoundation
 //code we used to for QR read functionality from https://www.hackingwithswift.com/example-code/media/how-to-scan-a-qr-code
-class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegate {
-    var captureSession: AVCaptureSession!
-    var previewLayer: AVCaptureVideoPreviewLayer!
+
+
+class QRViewController : UIViewController {
+    
+    var captureSession = AVCaptureSession()
+    var backCamera: AVCaptureDevice?
+    var frontCamera: AVCaptureDevice?
+    var currentCamera: AVCaptureDevice?
+    var photoOutput: AVCapturePhotoOutput?
+    var cameraPreviewLayer: AVCaptureVideoPreviewLayer?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-// not working in swift 3, we had to run swift 3 on checked out macs
-//        view.backgroundColor = UIColor.black
-//        captureSession = AVCaptureSession()
-//        
-//        guard let videoCaptureDevice = AVCaptureDevice.default(for: .video) else { return }
-//        let videoInput: AVCaptureDeviceInput
-//        
-//        do {
-//            videoInput = try AVCaptureDeviceInput(device: videoCaptureDevice)
-//        } catch {
-//            return
-//        }
-//        
-//        if (captureSession.canAddInput(videoInput)) {
-//            captureSession.addInput(videoInput)
-//        } else {
-//            failed()
-//            return
-//        }
-//        
-//        let metadataOutput = AVCaptureMetadataOutput()
-//        
-//        if (captureSession.canAddOutput(metadataOutput)) {
-//            captureSession.addOutput(metadataOutput)
-//            
-//            metadataOutput.setMetadataObjectsDelegate(self, queue: DispatchQueue.main)
-//            metadataOutput.metadataObjectTypes = [.qr]
-//        } else {
-//            failed()
-//            return
-//        }
-//        
-//        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-//        previewLayer.frame = view.layer.bounds
-//        previewLayer.videoGravity = .resizeAspectFill
-//        view.layer.addSublayer(previewLayer)
-//        
-//        captureSession.startRunning()
+        setupCaptureSession()
+        setupDevice()
+        setupInputOutput()
+        setupPreviewLayer()
+        startRunningCaptureSession()
+        
     }
     
-    func failed() {
+    func setupCaptureSession() {
+        captureSession.sessionPreset = AVCaptureSession.Preset.photo
+        
+    }
+    
+    func setupDevice() {
+        let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes:[AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.unspecified)
+        let devices = deviceDiscoverySession.devices
+        
+        for device in devices {
+            if device.position == AVCaptureDevice.Position.back {
+                backCamera = device
+            }
+            else if device.position == AVCaptureDevice.Position.front
+            {
+                frontCamera = device
+            }
+        }
+        currentCamera = backCamera
+    }
+    
+    func setupInputOutput() {
+        do{
+            let captureDeviceInput = try AVCaptureDeviceInput(device: currentCamera!)
+            captureSession.addInput(captureDeviceInput)
+            photoOutput?.setPreparedPhotoSettingsArray([AVCapturePhotoSettings(format: [AVVideoCodecKey: AVVideoCodecType.jpeg])], completionHandler: nil)
+        } catch {
+            print(error)
+        }
+    }
+    
+    func setupPreviewLayer() {
+        cameraPreviewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        cameraPreviewLayer?.videoGravity = AVLayerVideoGravity.resizeAspectFill
+        cameraPreviewLayer?.connection?.videoOrientation = AVCaptureVideoOrientation.portrait
+        cameraPreviewLayer?.frame = self.view.frame
+        self.view.layer.insertSublayer(cameraPreviewLayer!, at: 0)
+        
+    }
+    
+    func startRunningCaptureSession() {
+        captureSession.startRunning()
+    }
+    
+  /*  func failed() {
         let ac = UIAlertController(title: "Scanning not supported", message: "Your device does not support scanning a code from an item. Please use a device with a camera.", preferredStyle: .alert)
         ac.addAction(UIAlertAction(title: "OK", style: .default))
         present(ac, animated: true)
@@ -103,42 +122,13 @@ class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegat
     override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
         return .portrait
     }
-//    @IBOutlet weak var image: UIImageView!
-//    @IBAction func cameraScan(_ sender: UIButton) {
-//        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)
-//        {
-//            let imagePicker = UIImagePickerController()
-//            imagePicker.delegate = self
-//            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
-//
-//            imagePicker.allowsEditing = false
-//            self.present(imagePicker, animated: true, completion: nil)
-//
-//
-//        }
-//    }
-    
-   /* @IBAction func cameraScan(_ sender: UIButton) {
-        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.camera)
-        {
-            let imagePicker = UIImagePickerController()
-            imagePicker.delegate = self
-            imagePicker.sourceType = UIImagePickerControllerSourceType.camera
-            
-            imagePicker.allowsEditing = false
-            self.present(imagePicker, animated: true, completion: nil)
-            
-            
-        }
-    
-    }
-    */
+
     
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
 //        // Do any additional setup after loading the view, typically from a nib.
 //    }
-    
+    */
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

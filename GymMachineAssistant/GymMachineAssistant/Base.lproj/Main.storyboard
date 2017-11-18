@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Scan QR Code-->
+        <!--View Controller-->
         <scene sceneID="hNz-n2-bh7">
             <objects>
                 <viewController id="9pv-A4-QxB" customClass="QRViewController" customModule="GymMachineAssistant" customModuleProvider="target" sceneMemberID="viewController">
@@ -21,11 +21,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Scan QR Code" selectedImage="qrcodeicon" id="acW-dT-cKf"/>
+                    <navigationItem key="navigationItem" id="78u-Ef-zPg">
+                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="UkH-Na-Bbr"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1213.5999999999999" y="-336.88155922038982"/>
+            <point key="canvasLocation" x="1649" y="-352"/>
         </scene>
         <!--SearchBar-->
         <scene sceneID="zbn-fc-R0J">
@@ -66,7 +68,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="3070" y="270"/>
+            <point key="canvasLocation" x="3408.8000000000002" y="269.41529235382313"/>
         </scene>
         <!--Gym Map-->
         <scene sceneID="StG-H0-9PU">
@@ -223,7 +225,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YGI-aR-zgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3759" y="269"/>
+            <point key="canvasLocation" x="4096.8000000000002" y="268.51574212893553"/>
         </scene>
         <!--Foster's Fitness Center-->
         <scene sceneID="sqC-BS-lHc">
@@ -251,7 +253,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BPt-Ze-pVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-567.20000000000005" y="-27.436281859070466"/>
+            <point key="canvasLocation" x="-530" y="-25"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -264,14 +266,14 @@
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
-                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="i15-Bf-Red" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="1ic-CH-nfl" kind="relationship" relationship="viewControllers" id="6bY-Uj-VY5"/>
                         <segue destination="dXL-qO-iYW" kind="relationship" relationship="viewControllers" id="zXS-xm-hol"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="175.19999999999999" y="-26.53673163418291"/>
+            <point key="canvasLocation" x="218" y="-13"/>
         </scene>
         <!--Machines-->
         <scene sceneID="CT1-b9-lqy">
@@ -289,7 +291,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uSX-e5-V5Y" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2236" y="270.31484257871068"/>
+            <point key="canvasLocation" x="2575.1999999999998" y="270.31484257871068"/>
         </scene>
         <!--Gym Map-->
         <scene sceneID="Weq-hS-gb1">
@@ -308,6 +310,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1HM-OK-wB1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-311" y="752"/>
+        </scene>
+        <!--Scan QR Code-->
+        <scene sceneID="XRt-a8-7Qk">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i15-Bf-Red" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Scan QR Code" selectedImage="qrcodeicon" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tC5-4o-w1V">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="Goq-js-6zn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZG0-hd-5Gz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="870" y="-346"/>
         </scene>
     </scenes>
     <resources>
