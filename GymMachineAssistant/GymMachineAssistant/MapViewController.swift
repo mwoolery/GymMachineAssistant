@@ -10,6 +10,8 @@ import UIKit
 import MapKit
 import CoreLocation
 
+// map view set up and annotation from example on https://stackoverflow.com/questions/30793315/customize-mkannotation-callout-view
+
 class MapViewController: UIViewController , MKMapViewDelegate{
     
     
