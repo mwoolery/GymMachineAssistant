@@ -8,7 +8,8 @@
 
 import UIKit
 import AVFoundation
-//code we used to for QR read functionality from https://www.hackingwithswift.com/example-code/media/how-to-scan-a-qr-code
+//code we used to for QR read functionality from https://github.com/appcoda/QRCodeReader
+// it was covered on the site https://www.appcoda.com/barcode-reader-swift/
 
 
 class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegate {
@@ -37,6 +38,9 @@ class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegat
         super.viewDidLoad()
         //CoreDataModel.doCoreData()
         // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
+       
+    }
+    override func viewWillAppear(_ animated: Bool) {
         let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)
         
         do {
@@ -67,7 +71,7 @@ class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegat
             captureSession?.startRunning()
             
             // Move the message label and top bar to the front
-            view.bringSubview(toFront: messageLabel)
+            //view.bringSubview(toFront: messageLabel)
             //view.bringSubview(toFront: topbar)
             
             // Initialize QR Code Frame to highlight the QR code
@@ -85,6 +89,7 @@ class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegat
             print(error)
             return
         }
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -98,7 +103,7 @@ class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegat
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         
         // Check if the metadataObjects array is not nil and it contains at least one object.
-        if metadataObjects == nil || metadataObjects.count == 0 {
+        if metadataObjects.count == 0 {
             qrCodeFrameView?.frame = CGRect.zero
             messageLabel.text = "No QR/barcode is detected"
             return
@@ -113,16 +118,20 @@ class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegat
             qrCodeFrameView?.frame = barCodeObject!.bounds
             
             if metadataObj.stringValue != nil {
-                messageLabel.text = metadataObj.stringValue
-                let myMessage = messageLabel.text
+                
+                let myMessage = metadataObj.stringValue
                 let machineVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "machine_view_controller") as! MachineViewController
                 let machineIndex = myMachines.index(where: { (item) -> Bool in
                     item.name == myMessage
                 })
                 machineVC.machine = myMachines[machineIndex!]
+                
                 self.navigationController?.pushViewController(machineVC, animated: true)
+                self.captureSession?.stopRunning()
+                
             }
         }
+        
     }
     
 }
