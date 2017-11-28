@@ -31,9 +31,11 @@ class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegat
                               AVMetadataObject.ObjectType.pdf417,
                               AVMetadataObject.ObjectType.qr]
     
+    var myMachines = CoreDataModel.fetchAllItems()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        //CoreDataModel.doCoreData()
         // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
         let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)
         
@@ -112,6 +114,13 @@ class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegat
             
             if metadataObj.stringValue != nil {
                 messageLabel.text = metadataObj.stringValue
+                let myMessage = messageLabel.text
+                let machineVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "machine_view_controller") as! MachineViewController
+                let machineIndex = myMachines.index(where: { (item) -> Bool in
+                    item.name == myMessage
+                })
+                machineVC.machine = myMachines[machineIndex!]
+                self.navigationController?.pushViewController(machineVC, animated: true)
             }
         }
     }
