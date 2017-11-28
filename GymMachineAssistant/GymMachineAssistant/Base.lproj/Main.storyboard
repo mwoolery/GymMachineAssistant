@@ -22,15 +22,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
-                    <navigationItem key="navigationItem" id="78u-Ef-zPg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="camera" id="UkH-Na-Bbr"/>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" id="78u-Ef-zPg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1648.8" y="-352.17391304347831"/>
         </scene>
-        <!--SearchBar-->
+        <!--Machines-->
         <scene sceneID="zbn-fc-R0J">
             <objects>
                 <tableViewController id="OHR-Gh-HZP" customClass="MachineTableViewController" customModule="GymMachineAssistant" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,7 +51,7 @@
                             <outlet property="delegate" destination="OHR-Gh-HZP" id="L6N-wG-MuJ"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="SearchBar" id="VVQ-4R-tbF" userLabel="SearchBar"/>
+                    <navigationItem key="navigationItem" title="Machines" id="VVQ-4R-tbF" userLabel="SearchBar"/>
                     <connections>
                         <outlet property="machinesTV" destination="jzf-HE-o39" id="ezJ-Hi-LVP"/>
                         <outlet property="searchDisplayController" destination="v5q-Yk-aSd" id="Fw2-Ed-1yz"/>
