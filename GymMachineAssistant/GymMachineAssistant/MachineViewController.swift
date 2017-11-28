@@ -26,7 +26,7 @@ class MachineViewController: UIViewController {
         super.viewDidLoad()
         let imgName = machine.name!
         machineNameLBL.text = machine.name
-        locationNumberLBL.text = String(machine.location)
+        
         exerciseTypeLBL.text = machine.machineType
         muscleGroupLBL.text = machine.muscleGroupWorked
         machineImage.image = UIImage(named: "\(imgName).jpg")

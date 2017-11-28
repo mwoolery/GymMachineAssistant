@@ -38,7 +38,7 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
     func searchBarSetup() {
         let searchBar = UISearchBar(frame: CGRect(x:0,y:0,width:(UIScreen.main.bounds.width),height:70))
         searchBar.showsScopeBar = true
-        searchBar.scopeButtonTitles = ["name","muscleGroupWorked","location"]
+        searchBar.scopeButtonTitles = ["Name","Muscle Group Worked"]
         searchBar.selectedScopeButtonIndex = 0
         searchBar.delegate = self
         machinesTV.tableHeaderView = searchBar
@@ -46,7 +46,7 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
     
     // MARK: - search bar delegate
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print(searchText)
+       
         if searchText.isEmpty {
             dataAry = initialDataAry
             machinesTV.reloadData()
@@ -61,11 +61,10 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
             //fix of not searching when backspacing
             
             dataAry = initialDataAry.filter({ (mod) -> Bool in
-                print ("\(String(describing: mod.name?.lowercased())) : \(text.lowercased()) \(String(describing: mod.name?.lowercased().contains(text.lowercased())))")
+                
                 return mod.name!.lowercased().contains(text.lowercased())
             })
-            print(dataAry)
-            print("reload please")
+            
             machinesTV.reloadData()
         case selectedScope.muscleGroupWorked.rawValue:
             //fix of not searching when backspacing
@@ -73,12 +72,7 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
                 return (mod.muscleGroupWorked?.lowercased().contains(text.lowercased()))!
             })
             machinesTV.reloadData()
-        case selectedScope.location.rawValue:
-            //fix of not searching when backspacing
-            dataAry = initialDataAry.filter({ (mod) -> Bool in
-                return Int(mod.location) == Int(text)
-            })
-            machinesTV.reloadData()
+        
         default:
             print("no type")
         }
