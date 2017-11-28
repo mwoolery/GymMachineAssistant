@@ -83,62 +83,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="t07-D0-Lb3">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </mapView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ALA-cA-gUz">
-                                <rect key="frame" x="138" y="341" width="89" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Go to the pin"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="t07-D0-Lb3">
+                                <rect key="frame" x="16" y="72" width="343" height="529"/>
                                 <connections>
-                                    <action selector="goToPin:" destination="8ue-K0-d3b" eventType="touchUpInside" id="A30-kP-i3J"/>
+                                    <outlet property="delegate" destination="8ue-K0-d3b" id="mjO-vK-I1k"/>
                                 </connections>
-                            </button>
+                            </mapView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="t07-D0-Lb3" secondAttribute="trailing" constant="16" id="NRI-aG-gzv"/>
+                            <constraint firstItem="Uwt-1E-GbQ" firstAttribute="top" secondItem="t07-D0-Lb3" secondAttribute="bottom" constant="17" id="U90-3I-d9y"/>
+                            <constraint firstItem="t07-D0-Lb3" firstAttribute="leading" secondItem="9iR-n4-Qi9" secondAttribute="leading" constant="16" id="cF2-eX-uvX"/>
+                            <constraint firstItem="t07-D0-Lb3" firstAttribute="top" secondItem="fVB-Yx-oe6" secondAttribute="bottom" constant="8" id="sG9-td-G9o"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Gym Map" id="m5R-6W-rOt"/>
                     <connections>
                         <outlet property="mapView" destination="t07-D0-Lb3" id="8I7-dS-Z1T"/>
-                        <segue destination="oJm-OJ-Iaa" kind="show" identifier="gymViewSegue" id="aDR-Y9-dbf"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ajl-Lg-nEu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="455.19999999999999" y="751.57421289355329"/>
-        </scene>
-        <!--Gym Img View Controller-->
-        <scene sceneID="ich-5M-9ZE">
-            <objects>
-                <viewController id="oJm-OJ-Iaa" customClass="GymImgViewController" customModule="GymMachineAssistant" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="83Z-aV-GrV"/>
-                        <viewControllerLayoutGuide type="bottom" id="ZC4-0f-vXR"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="juw-kS-fGD">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="mapview" translatesAutoresizingMaskIntoConstraints="NO" id="ZOf-UM-FCw">
-                                <rect key="frame" x="0.0" y="64" width="375" height="295"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Entrance" translatesAutoresizingMaskIntoConstraints="NO" id="FBq-fe-XKW">
-                                <rect key="frame" x="0.0" y="357" width="191" height="261"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fullView" translatesAutoresizingMaskIntoConstraints="NO" id="MZ3-c6-Zss">
-                                <rect key="frame" x="190" y="357" width="185" height="261"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Bkb-TW-iJJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1213.5999999999999" y="751.57421289355329"/>
         </scene>
         <!--Machine View-->
         <scene sceneID="pgF-CF-ot9">
@@ -160,14 +127,14 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exercise Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="17G-zB-DWF">
-                                <rect key="frame" x="39" y="160" width="115" height="26"/>
+                                <rect key="frame" x="39" y="105" width="115" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Muscle Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uUo-VB-3uG">
-                                <rect key="frame" x="39" y="199" width="115" height="26"/>
+                                <rect key="frame" x="39" y="154" width="115" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -180,29 +147,38 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Muscle Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeN-cT-v0W">
-                                <rect key="frame" x="227" y="204" width="115" height="26"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Exercise Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fGZ-n2-QEV">
-                                <rect key="frame" x="227" y="160" width="115" height="26"/>
+                                <rect key="frame" x="227" y="110" width="115" height="26"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KkX-V3-Rvd">
-                                <rect key="frame" x="16" y="278" width="343" height="341"/>
+                                <rect key="frame" x="16" y="361" width="343" height="260"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Muscle Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeN-cT-v0W">
+                                <rect key="frame" x="227" y="154" width="115" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="B0c-by-wcb">
+                                <rect key="frame" x="39" y="188" width="303" height="139"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Machine View" id="JIe-CL-feM"/>
                     <connections>
+                        <outlet property="descriptionTV" destination="B0c-by-wcb" id="Sd4-zO-OcZ"/>
                         <outlet property="exerciseTypeLBL" destination="fGZ-n2-QEV" id="jV6-Fv-02k"/>
                         <outlet property="machineImage" destination="KkX-V3-Rvd" id="RrU-gR-ssK"/>
                         <outlet property="machineNameLBL" destination="jMb-wq-3bh" id="Fhi-FB-K1J"/>
@@ -226,8 +202,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Copy of Blue Fitness Instagram template" translatesAutoresizingMaskIntoConstraints="NO" id="mIW-zj-umD">
-                                <rect key="frame" x="-0.18482959211712569" y="0.0" width="374.99999999999989" height="666.99999999999989"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <rect key="frame" x="-1" y="0.0" width="375" height="667"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="0.0" right="8"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.036460063433929046" green="0.35698181053003997" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -239,7 +216,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BPt-Ze-pVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-530" y="-25"/>
+            <point key="canvasLocation" x="-530.39999999999998" y="-25.637181409295355"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -318,13 +295,10 @@
     </scenes>
     <resources>
         <image name="Copy of Blue Fitness Instagram template" width="1080" height="1080"/>
-        <image name="Entrance" width="938" height="626"/>
         <image name="QR" width="20" height="20"/>
-        <image name="fullView" width="952" height="630"/>
         <image name="list" width="512" height="512"/>
         <image name="listicon" width="16" height="16"/>
         <image name="mapicon" width="16" height="16"/>
-        <image name="mapview" width="706" height="555"/>
         <image name="qrcodeicon" width="16" height="16"/>
     </resources>
 </document>

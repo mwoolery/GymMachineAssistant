@@ -8,15 +8,14 @@
 
 import UIKit
 import MapKit
-class MapViewController: UIViewController {
+import CoreLocation
+
+class MapViewController: UIViewController , MKMapViewDelegate{
     
     
     @IBOutlet weak var mapView: MKMapView!
     
-    @IBAction func goToPin(_ sender: Any) {
-        
-        self.performSegue(withIdentifier: "gymViewSegue", sender: self)
-    }
+    
     
     
     
@@ -40,6 +39,52 @@ class MapViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if annotation is MKUserLocation {
+            return nil
+        }
+        
+        let identifier = "MyCustomAnnotation"
+        
+        var annotationView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+        if annotationView == nil {
+            annotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+            annotationView?.canShowCallout = true
+        } else {
+            annotationView!.annotation = annotation
+        }
+        
+        configureDetailView(annotationView: annotationView!)
+        
+        return annotationView
+    }
+    
+    func configureDetailView(annotationView: MKAnnotationView) {
+        let width = 300
+        let height = 200
+        
+        let snapshotView = UIView()
+        let views = ["snapshotView": snapshotView]
+        snapshotView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:[snapshotView(300)]", options: [], metrics: nil, views: views))
+        snapshotView.addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:[snapshotView(200)]", options: [], metrics: nil, views: views))
+        
+        
+        let options = MKMapSnapshotOptions()
+        options.size = CGSize(width: width, height: height)
+        options.mapType = .satelliteFlyover
+        options.camera = MKMapCamera(lookingAtCenter: annotationView.annotation!.coordinate, fromDistance: 250, pitch: 55, heading: 0)
+        
+        let snapshotter = MKMapSnapshotter(options: options)
+        snapshotter.start { snapshot, error in
+            if snapshot != nil {
+                let imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: width, height: height))
+                imageView.image = snapshot!.image
+                snapshotView.addSubview(imageView)
+            }
+        }
+        
+        annotationView.detailCalloutAccessoryView = snapshotView
     }
     
 

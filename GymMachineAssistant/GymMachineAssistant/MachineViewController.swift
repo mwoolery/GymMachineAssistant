@@ -13,6 +13,8 @@ class MachineViewController: UIViewController {
     
     var machine:Machine!
     
+    @IBOutlet weak var descriptionTV: UITextView!
+    
     @IBOutlet weak var machineNameLBL: UILabel!
     
     @IBOutlet weak var locationNumberLBL: UILabel!
@@ -29,6 +31,7 @@ class MachineViewController: UIViewController {
         
         exerciseTypeLBL.text = machine.machineType
         muscleGroupLBL.text = machine.muscleGroupWorked
+        descriptionTV.text = machine.desc
         machineImage.image = UIImage(named: "\(imgName).jpg")
         // Do any additional setup after loading the view.
     }
