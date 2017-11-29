@@ -19,6 +19,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        // Michael Rogers created this file manager example
+        func fileManagerPlay(){
+            let fm:FileManager = FileManager.default
+            
+            var docsURL:URL
+            var coreDataCanaryURL:URL
+            
+            do {
+                try docsURL = fm.url(for: .documentDirectory, in: .userDomainMask,
+                                     appropriateFor: nil, create: false)
+                coreDataCanaryURL = docsURL.appendingPathComponent("Core Data In Use").appendingPathExtension("txt")
+                print(coreDataCanaryURL)
+                if !fm.fileExists(atPath: coreDataCanaryURL.path){
+                    // the code here will only be called once when the app is first installed
+                    try "Hello".write(to: coreDataCanaryURL, atomically: true, encoding:.ascii)
+                    // create whatever CoreData stuff you need to create here ...
+                    CoreDataModel.doCoreData()
+                    print("Core data completed")
+                }
+                
+            }catch {
+                print("Something has gone wrong: \(error)")
+            }
+        }
+        fileManagerPlay()
+        
         return true
     }
 
