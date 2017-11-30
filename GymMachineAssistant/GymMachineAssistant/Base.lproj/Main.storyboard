@@ -169,7 +169,7 @@
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="B0c-by-wcb">
                                 <rect key="frame" x="36" y="193" width="303" height="139"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.8624136644298559" green="0.88974564789652966" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="303" id="fLD-hp-9U9"/>
                                     <constraint firstAttribute="height" constant="139" id="u3J-zM-iLA"/>
