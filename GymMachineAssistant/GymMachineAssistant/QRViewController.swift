@@ -116,7 +116,7 @@ class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegat
             // If the found metadata is equal to the QR code metadata then update the status label's text and set the bounds
             //let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj)
             //qrCodeFrameView?.frame = barCodeObject!.bounds
-            
+            self.captureSession?.stopRunning()
             if metadataObj.stringValue != nil {
                 
                 let myMessage = metadataObj.stringValue
@@ -127,7 +127,7 @@ class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegat
                 machineVC.machine = myMachines[machineIndex!]
                 
                 self.navigationController?.pushViewController(machineVC, animated: true)
-                self.captureSession?.stopRunning()
+                
                 
             }
         }
