@@ -34,10 +34,7 @@ class CoreDataModel {
         // use name for video string and image string
         machine00.name = "Chest Fly"
         //Description is new to our entities Use this to add in a description field on machine view controller
-        machine00.desc = """
-        The chest fly is similar to a chest press in that you lie on an exercise bench with your knees bent up on the bench. With the fly you start by holding light dumbbells straight up in the air, palms facing together.
-        Be careful not to let your shoulders or elbows drop lower than the exercise bench.
-        """
+        machine00.desc = "The chest fly is similar to a chest press in that you lie on an exercise bench with your knees bent up on the bench. With the fly you start by holding light dumbbells straight up in the air, palms facing together. Be careful not to let your shoulders or elbows drop lower than the exercise bench."
         machine00.machineType = "Weight"
         machine00.location = 1
         machine00.muscleGroupWorked = "Chest"
