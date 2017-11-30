@@ -84,7 +84,7 @@ class CoreDataModel {
         
         let machine04 = NSEntityDescription.insertNewObject(forEntityName: "Machine",into: moc)as! Machine
         machine04.name = "Smith Machine"
-        machine04.desc = "Smith Machine Description"
+        machine04.desc = "The Smith machine is a weight machine used for weight training. It consists of a barbell that is fixed within steel rails allowing only vertical or near-vertical movement. Some Smith machines have the barbell counterbalanced. The machine can be used for a wide variety of exercises though it is most commonly used to perform.. Smith machine squats"
         machine04.machineType = "Weight"
         machine04.location = 5
         machine04.muscleGroupWorked = "Shoulders"
@@ -92,7 +92,7 @@ class CoreDataModel {
         
         let machine05 = NSEntityDescription.insertNewObject(forEntityName: "Machine",into: moc)as! Machine
         machine05.name = "Suspension Trainer"
-        machine05.desc = "Chest"
+        machine05.desc = "The term suspension training refers to an approach to strength training that uses a system of ropes and webbing called a suspension trainer to allow users to work against their own body weight."
         machine05.machineType = "Weight"
         machine05.location = 6
         machine05.muscleGroupWorked = "Full Body Workout"
@@ -100,7 +100,7 @@ class CoreDataModel {
         
         let machine06 = NSEntityDescription.insertNewObject(forEntityName: "Machine",into: moc)as! Machine
         machine06.name = "The Roman Chair"
-        machine06.desc = "The Roman Chair Description"
+        machine06.desc = "The Roman chair is a piece of exercise equipment. The equipment is mainly used for the lower back, but can also target the gluteal muscles, hamstring and abdominals."
         machine06.machineType = "Weight"
         machine06.location = 7
         machine06.muscleGroupWorked = "Back, Core, Abdominals, Hamstrings, Abs"
@@ -108,7 +108,7 @@ class CoreDataModel {
         
         let machine07 = NSEntityDescription.insertNewObject(forEntityName: "Machine",into: moc)as! Machine
         machine07.name = "Cross Trainer"
-        machine07.desc = "Cross Trainer Description"
+        machine07.desc = "An elliptical trainer or cross-trainer (also called an X-trainer) is a stationary exercise machine used to simulate stair climbing, walking, or running without causing excessive pressure to the joints, hence decreasing the risk of impact injuries."
         machine07.machineType = "Cardio"
         machine07.location = 8
         machine07.muscleGroupWorked = "Legs, Cardio"
@@ -116,7 +116,7 @@ class CoreDataModel {
         
         let machine08 = NSEntityDescription.insertNewObject(forEntityName: "Machine",into: moc)as! Machine
         machine08.name = "Stationary Bike"
-        machine08.desc = "Stationary Bike Description"
+        machine08.desc = "A stationary bicycle (also known as exercise bicycle, exercise bike, spinning bike, spin bike, or exercycle) is a device with saddle, pedals, and some form of handlebars arranged as on a bicycle."
         machine08.machineType = "Cardiovascular"
         machine08.location = 9
         machine08.muscleGroupWorked = "Cardio, Legs"
@@ -124,7 +124,7 @@ class CoreDataModel {
         
         let machine09 = NSEntityDescription.insertNewObject(forEntityName: "Machine",into: moc)as! Machine
         machine09.name = "Rowing Machine"
-        machine09.desc = "Rowing Machine Description"
+        machine09.desc = "Indoor rowing has become established as a sport in its own right. The term also refers to a participant in this sport. Modern indoor rowers are often known as ergometers (colloquially erg or ergo), an ergometer being a device which measures the amount of work performed."
         machine09.machineType = "Weight"
         machine09.location = 10
         machine09.muscleGroupWorked = "Back, Bicep"
