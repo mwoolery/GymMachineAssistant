@@ -34,7 +34,10 @@ class CoreDataModel {
         // use name for video string and image string
         machine00.name = "Chest Fly"
         //Description is new to our entities Use this to add in a description field on machine view controller
-        machine00.desc = "Chest Fly Description"
+        machine00.desc = """
+        The chest fly is similar to a chest press in that you lie on an exercise bench with your knees bent up on the bench. With the fly you start by holding light dumbbells straight up in the air, palms facing together.
+        Be careful not to let your shoulders or elbows drop lower than the exercise bench.
+        """
         machine00.machineType = "Weight"
         machine00.location = 1
         machine00.muscleGroupWorked = "Chest"
@@ -42,7 +45,14 @@ class CoreDataModel {
         
         let machine01 = NSEntityDescription.insertNewObject(forEntityName: "Machine",into: moc)as! Machine
         machine01.name = "Bench Press"
-        machine01.desc = "Bench Press Description"
+        machine01.desc = """
+        The bench press is an upper body strength training exercise that consists of pressing a weight upwards from
+        supine position. The exercise works the pectoralis major as well as supporting chest, arm, and shoulder
+        muscles such as the anterior deltoids, serratus anterior, coracobrachialis, scapulae fixers, trapezii,
+        and the triceps.
+        Lie back on a flat bench. Using a medium width grip (a grip that creates a 90-degree angle in the middle of the movement between the forearms and the upper arms),
+        lift the bar from the rack and hold it straight over you with your arms locked. This will be your starting position.
+        """
         machine01.machineType = "Weight"
         machine01.location = 2
         machine01.muscleGroupWorked = "Chest, Tricep"
@@ -50,7 +60,10 @@ class CoreDataModel {
         
         let machine02 = NSEntityDescription.insertNewObject(forEntityName: "Machine",into: moc)as! Machine
         machine02.name = "Treadmill"
-        machine02.desc = "Treadmill Description"
+        machine02.desc = """
+        A treadmill is a device generally for walking or running or climbing while staying in the same place.
+        The belt moves to the rear, requiring the user to walk or run at a speed matching that of the belt. The rate at which the belt moves is the rate of walking or running. Thus, the speed of running may be controlled and measured. The more expensive, heavy-duty versions are motor-driven (usually by an electric motor). The simpler, lighter, and less expensive versions passively resist the motion, moving only when walkers push the belt with their feet. The latter are known as manual treadmills.
+        """
         machine02.machineType = "Cardiovascular"
         machine02.location = 3
         machine02.muscleGroupWorked = "Cardio"
@@ -58,7 +71,12 @@ class CoreDataModel {
         
         let machine03 = NSEntityDescription.insertNewObject(forEntityName: "Machine",into: moc)as! Machine
         machine03.name = "Lateral Pull-Down"
-        machine03.desc = "Lateral Pull-Down Description"
+        machine03.desc = """
+        Sit down on a pull-down machine with a wide bar attached to the top pulley. Make sure that you adjust the knee pad of the machine to fit your height. These pads will prevent your body from being raised by the resistance attached to the bar.
+        Grab the bar with the palms facing forward using the prescribed grip.As you have both arms extended in front of you holding the bar at the chosen grip width, bring your torso back around 30 degrees or so while creating a curvature on your lower back and sticking your chest out. This is your starting position.
+        As you breathe out, bring the bar down until it touches your upper chest by drawing the shoulders and the upper arms down and back.
+        After a second at the contracted position squeezing your shoulder blades together, slowly raise the bar back to the starting position when your arms are fully extended and the lats are fully stretched. Inhale during this portion of the movement.And repeat.
+        """
         machine03.machineType = "Weight"
         machine03.location = 4
         machine03.muscleGroupWorked = "Back, Bicep"
