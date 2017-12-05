@@ -15,8 +15,7 @@ import AVFoundation
 class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
     @IBOutlet var messageLabel:UILabel!
-    @IBOutlet var topbar: UIView!
-    
+        
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?

@@ -115,7 +115,7 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
     // makes the individual birds controller
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
         let machineVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "machine_view_controller") as! MachineViewController
-       machineVC.machine = dataAry[indexPath.row]
+        machineVC.machine = dataAry[indexPath.row]
         self.navigationController?.pushViewController(machineVC, animated: true)
     }
    
