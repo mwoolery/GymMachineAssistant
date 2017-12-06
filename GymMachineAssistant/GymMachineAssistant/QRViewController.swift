@@ -14,7 +14,6 @@ import AVFoundation
 
 class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
-    
     // create the session to capture a QR Code
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
@@ -100,9 +99,6 @@ class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegat
             captureSession?.stopRunning()
         }
     }
-    
-    
-    
     
     // For AVCaptureMetadataDelegate, modified to instantiate view controller instead of just display what is read
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {

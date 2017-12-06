@@ -17,11 +17,7 @@ enum selectedScope:Int {
 
 class MachineTableViewController: UITableViewController,UISearchBarDelegate {
     
-    
-    
     @IBOutlet var machinesTV: UITableView!
-    
-    
     
     static let myMachines = CoreDataModel.fetchAllItems()
     let initialDataAry:[Machine] = myMachines

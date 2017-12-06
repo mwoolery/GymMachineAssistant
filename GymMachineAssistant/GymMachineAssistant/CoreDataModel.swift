@@ -130,9 +130,6 @@ class CoreDataModel {
         machine09.muscleGroupWorked = "Back, Bicep"
         machine09.gym = gym0
         
-        
-        
-        
         do {
             // Try to save
             try moc.save()

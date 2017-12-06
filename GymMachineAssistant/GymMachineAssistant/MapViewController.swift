@@ -14,13 +14,8 @@ import CoreLocation
 
 class MapViewController: UIViewController , MKMapViewDelegate{
     
-    
     @IBOutlet weak var mapView: MKMapView!
-    
-    
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         //CoreDataModel.doCoreData()
@@ -44,6 +39,7 @@ class MapViewController: UIViewController , MKMapViewDelegate{
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
     // Setting up the map view, this is from the stack overflow thread
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if annotation is MKUserLocation {
@@ -64,6 +60,7 @@ class MapViewController: UIViewController , MKMapViewDelegate{
         
         return annotationView
     }
+    
     // this configures the view that is displayed when a pin is tapped, this was retrieved from the stack overflow thread and we updated it a bit to better suit our needs
     func configureDetailView(annotationView: MKAnnotationView) {
         let width = 300

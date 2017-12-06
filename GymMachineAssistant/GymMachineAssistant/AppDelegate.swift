@@ -13,7 +13,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
     
-    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         // Michael Rogers created this file manager example
@@ -83,7 +82,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         })
         return container
     }()
-    
     
     // Save for Core Data Context
     func saveContext () {
