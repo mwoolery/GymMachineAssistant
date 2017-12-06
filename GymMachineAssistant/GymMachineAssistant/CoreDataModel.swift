@@ -129,10 +129,10 @@ class CoreDataModel {
         machine09.location = 10
         machine09.muscleGroupWorked = "Back, Bicep"
         machine09.gym = gym0
-
-      
-
-
+        
+        
+        
+        
         do {
             // Try to save
             try moc.save()
@@ -146,7 +146,7 @@ class CoreDataModel {
     static func fetchAllItems() ->[Machine]{
         let moc = (UIApplication.shared.delegate as!
             AppDelegate).persistentContainer.viewContext
-       var machines = [Machine]()
+        var machines = [Machine]()
         do {
             let fetchRequest:NSFetchRequest<Machine> = NSFetchRequest(entityName: "Machine")
             machines =
@@ -184,15 +184,15 @@ class CoreDataModel {
         var gyms:[Gym]!
         let moc = (UIApplication.shared.delegate as!
             AppDelegate).persistentContainer.viewContext
-
+        
         let fetchRequest:NSFetchRequest<Gym> = NSFetchRequest(entityName: "Gym")
         fetchRequest.predicate = NSPredicate(format:"name contains %@ ","Foster")
         do {
             gyms = try moc.fetch(fetchRequest)
-
+            
             for gym in gyms {
                 print("Gym:  \(String(describing: gym.name))")
-
+                
                 for machine in gym.machines!{
                     print("Name: \((machine as! Machine).name!), \nContent \((machine as! Machine).location)")
                 }
@@ -207,19 +207,19 @@ class CoreDataModel {
         var gyms:[Gym]!
         let moc = (UIApplication.shared.delegate as!
             AppDelegate).persistentContainer.viewContext
-
+        
         let fetchRequest:NSFetchRequest<Gym> = NSFetchRequest(entityName: "Gym")
-
+        
         let includesFirst = NSPredicate(format:"name contains %@ ","Foster")
         let endsWithGym = NSPredicate(format:"name endsWith %@", "Gym")
-
+        
         fetchRequest.predicate = NSCompoundPredicate(type:.and, subpredicates: [includesFirst, endsWithGym] )
         do {
             gyms = try moc.fetch(fetchRequest)
-
+            
             for gym in gyms {
                 print("Gym:  \(String(describing: gym.name))")
-
+                
                 for machine in gym.machines!{
                     print("Name: \((machine as! Machine).name!), \nContent \((machine as! Machine).location)")
                 }
@@ -227,6 +227,6 @@ class CoreDataModel {
         } catch {
             print("Error when trying to fetch: \(error)")
         }
-
-}
+        
+    }
 }

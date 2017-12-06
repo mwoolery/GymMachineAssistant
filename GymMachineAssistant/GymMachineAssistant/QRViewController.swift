@@ -14,7 +14,7 @@ import AVFoundation
 
 class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
-   
+    
     // create the session to capture a QR Code
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
@@ -36,7 +36,7 @@ class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegat
     
     override func viewDidLoad() {
         super.viewDidLoad()
- 
+        
     }
     // Everything is in here since the capture session will need to be reset each time we come back
     // Below code is from the AppCoda example, somewhat modified but we could'nt do it with out them

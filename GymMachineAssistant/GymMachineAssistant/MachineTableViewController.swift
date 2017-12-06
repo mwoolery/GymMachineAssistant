@@ -16,7 +16,7 @@ enum selectedScope:Int {
 }
 
 class MachineTableViewController: UITableViewController,UISearchBarDelegate {
-
+    
     
     
     @IBOutlet var machinesTV: UITableView!
@@ -45,7 +45,7 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
     
     // MARK: - search bar delegate
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-       
+        
         if searchText.isEmpty {
             dataAry = initialDataAry
             machinesTV.reloadData()
@@ -56,7 +56,7 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
     // We use this to update the table view so it displays only machines that the user started to enter for in the search bar
     func filterTableView(ind:Int,text:String) {
         switch ind {
-            //filter for when they are searching on name tab
+        //filter for when they are searching on name tab
         case selectedScope.name.rawValue:
             // filter the array
             dataAry = initialDataAry.filter({ (mod) -> Bool in
@@ -65,7 +65,7 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
             })
             //then reload the tableview to reflect current values
             machinesTV.reloadData()
-            //filter for when they are on muscle group tab
+        //filter for when they are on muscle group tab
         case selectedScope.muscleGroupWorked.rawValue:
             
             dataAry = initialDataAry.filter({ (mod) -> Bool in
@@ -74,13 +74,13 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
             })
             //reload table view
             machinesTV.reloadData()
-        
+            
         default:
             //the default, shouldn't be hit but has to be here for the switch
             print("no type")
         }
     }
-
+    
     //number of sections in the table view
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
@@ -113,7 +113,7 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
         //push it so we can see it
         self.navigationController?.pushViewController(machineVC, animated: true)
     }
-   
+    
     // refreshes the data each visit
     override func viewWillAppear(_ animated: Bool) {
         tableView.reloadData()

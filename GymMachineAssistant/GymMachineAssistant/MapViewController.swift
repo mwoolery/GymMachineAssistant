@@ -35,11 +35,11 @@ class MapViewController: UIViewController , MKMapViewDelegate{
             let gymPinLoc = GymMapLoc(title: i.name!, subtitle: i.name!, coordinate: gymMapLocation)
             //add the annotation
             mapView.addAnnotation(gymPinLoc)
-    }
+        }
         
         // Do any additional setup after loading the view.
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -93,7 +93,7 @@ class MapViewController: UIViewController , MKMapViewDelegate{
         annotationView.detailCalloutAccessoryView = snapshotView
     }
     
-
-
-
+    
+    
+    
 }
