@@ -34,6 +34,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                     // create the Core Data Model
                     CoreDataModel.doCoreData()
                     print("Core data completed")
+                    //Core Data takes awhile, so the first load will be a little slow so it is successful
+                    
                 }
                 
             }catch {
