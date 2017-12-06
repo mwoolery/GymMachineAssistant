@@ -176,7 +176,7 @@
                                 </constraints>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <mutableString key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</mutableString>
+                                        <string key="content">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                         <attributes>
                                             <font key="NSFont" metaFont="system" size="14"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
@@ -207,19 +207,19 @@
                         <constraints>
                             <constraint firstItem="jMb-wq-3bh" firstAttribute="leading" secondItem="aAb-wl-ZmR" secondAttribute="trailing" constant="73" id="0TG-OA-oRc"/>
                             <constraint firstItem="aAb-wl-ZmR" firstAttribute="leading" secondItem="9Dj-is-ZaI" secondAttribute="leading" constant="39" id="CKt-lR-Dje"/>
+                            <constraint firstItem="B0c-by-wcb" firstAttribute="leading" secondItem="9Dj-is-ZaI" secondAttribute="leading" constant="36" id="Cqm-8a-wQP"/>
                             <constraint firstItem="fGZ-n2-QEV" firstAttribute="leading" secondItem="17G-zB-DWF" secondAttribute="trailing" constant="82" id="Dqa-Sf-z5A"/>
-                            <constraint firstItem="B0c-by-wcb" firstAttribute="centerX" secondItem="9Dj-is-ZaI" secondAttribute="centerX" id="Iyb-WT-TyK"/>
+                            <constraint firstItem="KkX-V3-Rvd" firstAttribute="leading" secondItem="9Dj-is-ZaI" secondAttribute="leading" constant="16" id="ElO-YA-OvC"/>
                             <constraint firstItem="jMb-wq-3bh" firstAttribute="top" secondItem="zqz-Uk-qQR" secondAttribute="bottom" constant="16" id="Jzp-Bz-wda"/>
                             <constraint firstItem="B0c-by-wcb" firstAttribute="top" secondItem="uUo-VB-3uG" secondAttribute="bottom" constant="38.5" id="Lqj-0A-NPa"/>
                             <constraint firstItem="17G-zB-DWF" firstAttribute="leading" secondItem="9Dj-is-ZaI" secondAttribute="leading" constant="39" id="M2g-zA-JUj"/>
                             <constraint firstItem="VeN-cT-v0W" firstAttribute="top" secondItem="fGZ-n2-QEV" secondAttribute="bottom" constant="13.5" id="MtQ-V7-Ivi"/>
                             <constraint firstItem="uUo-VB-3uG" firstAttribute="top" secondItem="17G-zB-DWF" secondAttribute="bottom" constant="13.5" id="UfV-ZE-8JC"/>
                             <constraint firstItem="zqz-Uk-qQR" firstAttribute="top" secondItem="8Qp-Tl-rbC" secondAttribute="bottom" id="Zu2-sU-MiU"/>
-                            <constraint firstItem="zqz-Uk-qQR" firstAttribute="centerX" secondItem="9Dj-is-ZaI" secondAttribute="centerX" id="axD-ZO-2rl"/>
-                            <constraint firstItem="KkX-V3-Rvd" firstAttribute="centerX" secondItem="9Dj-is-ZaI" secondAttribute="centerX" id="cEP-y2-7aZ"/>
                             <constraint firstItem="fGZ-n2-QEV" firstAttribute="top" secondItem="jMb-wq-3bh" secondAttribute="bottom" constant="17.5" id="e99-H3-CYp"/>
                             <constraint firstItem="VeN-cT-v0W" firstAttribute="leading" secondItem="uUo-VB-3uG" secondAttribute="trailing" constant="73" id="eSh-Vr-fCF"/>
                             <constraint firstItem="KkX-V3-Rvd" firstAttribute="top" secondItem="B0c-by-wcb" secondAttribute="bottom" constant="34" id="eyW-HZ-aAg"/>
+                            <constraint firstItem="zqz-Uk-qQR" firstAttribute="leading" secondItem="9Dj-is-ZaI" secondAttribute="leading" constant="47" id="heM-cg-onb"/>
                             <constraint firstItem="17G-zB-DWF" firstAttribute="top" secondItem="aAb-wl-ZmR" secondAttribute="bottom" constant="17.5" id="tKy-uq-dLk"/>
                             <constraint firstItem="uUo-VB-3uG" firstAttribute="leading" secondItem="9Dj-is-ZaI" secondAttribute="leading" constant="39" id="zKJ-Zd-DjI"/>
                             <constraint firstItem="aAb-wl-ZmR" firstAttribute="top" secondItem="zqz-Uk-qQR" secondAttribute="bottom" constant="16" id="zli-ZP-xGg"/>
@@ -308,6 +308,7 @@
         <!--Gym Map-->
         <scene sceneID="Weq-hS-gb1">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1HM-OK-wB1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1ic-CH-nfl" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Gym Map" image="QR" landscapeImage="QR" selectedImage="mapicon" id="e9m-ii-RD5"/>
                     <toolbarItems/>
@@ -319,7 +320,6 @@
                         <segue destination="8ue-K0-d3b" kind="relationship" relationship="rootViewController" id="CYa-8F-6rh"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1HM-OK-wB1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-311" y="752"/>
         </scene>

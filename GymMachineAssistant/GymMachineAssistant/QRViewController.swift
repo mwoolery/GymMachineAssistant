@@ -96,6 +96,13 @@ class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegat
         // Dispose of any resources that can be recreated.
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        if captureSession?.isRunning == true {
+            captureSession?.stopRunning()
+        }
+    }
+    
+    
     
     // MARK: - AVCaptureMetadataOutputObjectsDelegate Methods
     
