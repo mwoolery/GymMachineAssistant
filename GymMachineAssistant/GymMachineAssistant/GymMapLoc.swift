@@ -7,7 +7,7 @@
 //
 
 import MapKit
-
+// This is used to make pin annotations
 class GymMapLoc:  NSObject, MKAnnotation{
     
     var title: String?

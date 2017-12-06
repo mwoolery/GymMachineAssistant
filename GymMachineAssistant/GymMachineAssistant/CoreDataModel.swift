@@ -13,12 +13,15 @@ import CoreData
 
 class CoreDataModel {
     
+    //This is used to make the data that the entire application will use
     static func doCoreData(){
+        //Makes the Context
         let moc = (UIApplication.shared.delegate as!
             AppDelegate).persistentContainer.viewContext
         
+        //This is how we make gym objects
         let gym0 = NSEntityDescription.insertNewObject(forEntityName: "Gym",into: moc) as! Gym
-
+        // and this is how we make them have data
         gym0.name = "Foster Fitness Center"
         gym0.latitude = 40.3505584
         gym0.longitude = -94.88488749999999
@@ -29,11 +32,11 @@ class CoreDataModel {
         gym1.latitude = 40.331034
         gym1.longitude = -94.874796
         
-        
+        // this is for making machine objects
         let machine00 = NSEntityDescription.insertNewObject(forEntityName: "Machine",into: moc)as! Machine
-        // use name for video string and image string
+        // And this is how we give them data
         machine00.name = "Chest Fly"
-        //Description is new to our entities Use this to add in a description field on machine view controller
+        //Description is one of the Core Data default fields so we have to call it desc
         machine00.desc = "The chest fly is similar to a chest press in that you lie on an exercise bench with your knees bent up on the bench. With the fly you start by holding light dumbbells straight up in the air, palms facing together. Be careful not to let your shoulders or elbows drop lower than the exercise bench."
         machine00.machineType = "Weight"
         machine00.location = 1
@@ -131,6 +134,7 @@ class CoreDataModel {
 
 
         do {
+            // Try to save
             try moc.save()
             print("Success, I guess ...")
         } catch {
@@ -138,7 +142,7 @@ class CoreDataModel {
         }
         
     }
-    // For Machine VC
+    // For Machine VC, fetches all of the items
     static func fetchAllItems() ->[Machine]{
         let moc = (UIApplication.shared.delegate as!
             AppDelegate).persistentContainer.viewContext
@@ -156,7 +160,7 @@ class CoreDataModel {
         return machines
     }
     
-    // For Map VC
+    // For Map VC, fetches all of the gyms
     static func fetchAllGyms() ->[Gym]{
         let moc = (UIApplication.shared.delegate as!
             AppDelegate).persistentContainer.viewContext
@@ -174,7 +178,7 @@ class CoreDataModel {
         return gyms
     }
     
-    
+    // Not used in our application but it could used in the future to make it only display machines for certain gyms, such as only Foster Fitness Center
     static func fetchSomeItems(){
         
         var gyms:[Gym]!
@@ -198,7 +202,7 @@ class CoreDataModel {
         }
         
     }
-    
+    // This could be used in the future as well but is not used in our application currently
     static func fetchWithCompoundPredicates(){
         var gyms:[Gym]!
         let moc = (UIApplication.shared.delegate as!

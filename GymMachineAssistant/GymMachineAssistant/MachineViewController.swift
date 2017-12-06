@@ -26,12 +26,17 @@ class MachineViewController: UIViewController {
     @IBOutlet weak var machineImage: UIImageView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        // get image name
         let imgName = machine.name!
+        //set the label to the name of machine
         machineNameLBL.text = machine.name
-        
+        //set the label to the exercise type
         exerciseTypeLBL.text = machine.machineType
+        //set the label to what is being worked
         muscleGroupLBL.text = machine.muscleGroupWorked
+        //set the text to the description of how to use
         descriptionTV.text = machine.desc
+        //set the image
         machineImage.image = UIImage(named: "\(imgName).jpg")
         // Do any additional setup after loading the view.
     }

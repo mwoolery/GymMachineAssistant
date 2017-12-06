@@ -10,6 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    // This is the splash screen that we see while the app loads
     override func viewDidLoad() {
         super.viewDidLoad()
         let when = DispatchTime.now() + 2

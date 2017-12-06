@@ -8,10 +8,11 @@
 
 import UIKit
 
+// used for the tab selection at top
 enum selectedScope:Int {
     case name = 0
     case muscleGroupWorked = 1
-    case location = 2
+    
 }
 
 class MachineTableViewController: UITableViewController,UISearchBarDelegate {
@@ -30,14 +31,12 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
         super.viewDidLoad()
         self.searchBarSetup()
         
-        //CoreDataModel.doCoreData()
-        
-        //machinesTV.register(MachineTableViewCell.self,forCellReuseIdentifier: "machine_cell")
     }
-    
+    // Setting up the search bar
     func searchBarSetup() {
         let searchBar = UISearchBar(frame: CGRect(x:0,y:0,width:(UIScreen.main.bounds.width),height:70))
         searchBar.showsScopeBar = true
+        //this is to make the tabs
         searchBar.scopeButtonTitles = ["Name","Muscle Group Worked"]
         searchBar.selectedScopeButtonIndex = 0
         searchBar.delegate = self
@@ -54,68 +53,64 @@ class MachineTableViewController: UITableViewController,UISearchBarDelegate {
             filterTableView(ind: searchBar.selectedScopeButtonIndex,text: searchText)
         }
     }
-    
+    // We use this to update the table view so it displays only machines that the user started to enter for in the search bar
     func filterTableView(ind:Int,text:String) {
         switch ind {
+            //filter for when they are searching on name tab
         case selectedScope.name.rawValue:
-            //fix of not searching when backspacing
-            
+            // filter the array
             dataAry = initialDataAry.filter({ (mod) -> Bool in
-                
+                // return items that fit what we passed in
                 return mod.name!.lowercased().contains(text.lowercased())
             })
-            
+            //then reload the tableview to reflect current values
             machinesTV.reloadData()
+            //filter for when they are on muscle group tab
         case selectedScope.muscleGroupWorked.rawValue:
-            //fix of not searching when backspacing
+            
             dataAry = initialDataAry.filter({ (mod) -> Bool in
+                //return items that match what was passed in
                 return (mod.muscleGroupWorked?.lowercased().contains(text.lowercased()))!
             })
+            //reload table view
             machinesTV.reloadData()
         
         default:
+            //the default, shouldn't be hit but has to be here for the switch
             print("no type")
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    // Mark ***************************************************************************
+
+    //number of sections in the table view
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-    
+    //get the number of rows
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        guard var Machine = Gym.machineList else {
-//            return 0
-//        }
-        
+        // number of rows from dataAry which comes from Core Data.
         return dataAry.count
     }
-    
+    // this is what is put into the cells
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // makine the cell
         let cell = tableView.dequeueReusableCell(withIdentifier: "machine_cell", for: indexPath)
+        //setting the image
         let imgName = dataAry[indexPath.row].name!
+        //adding the text
         cell.textLabel?.text = dataAry[indexPath.row].name
-        cell.detailTextLabel?.text = dataAry[indexPath.row].machineType
+        //adding the image
         cell.imageView?.image = UIImage(named: "\(imgName).jpg")
         return cell
     }
     
-    // makes the individual birds controller
+    // makes the individual machines controllers when the row is tapped
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath){
+        //instantiate the VC
         let machineVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "machine_view_controller") as! MachineViewController
+        //set the machine from the selected row
         machineVC.machine = dataAry[indexPath.row]
+        //push it so we can see it
         self.navigationController?.pushViewController(machineVC, animated: true)
     }
    

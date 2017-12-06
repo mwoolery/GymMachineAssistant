@@ -12,7 +12,6 @@
 		0DE3BB031F8863B100359D48 /* MachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3BB021F8863B100359D48 /* MachineViewController.swift */; };
 		3F0B79B71FAC07D500E40A71 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0B79B61FAC07D500E40A71 /* HomeViewController.swift */; };
 		8E26BA011FABADC80036687B /* Gym.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E26B9FF1FABADC80036687B /* Gym.xcdatamodeld */; };
-		CD8A5F491F9A74E5009392E2 /* MachineTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD8A5F481F9A74E5009392E2 /* MachineTableViewCell.swift */; };
 		CDC1FBB21FBE2C95004C4C0E /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1FBB11FBE2C95004C4C0E /* CoreDataModel.swift */; };
 		CDF913D31F88099F00ED350C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF913D21F88099F00ED350C /* AppDelegate.swift */; };
 		CDF913D51F88099F00ED350C /* QRViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF913D41F88099F00ED350C /* QRViewController.swift */; };
@@ -47,7 +46,6 @@
 		0DE3BB021F8863B100359D48 /* MachineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineViewController.swift; sourceTree = "<group>"; };
 		3F0B79B61FAC07D500E40A71 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8E26BA001FABADC80036687B /* Gym.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gym.xcdatamodel; sourceTree = "<group>"; };
-		CD8A5F481F9A74E5009392E2 /* MachineTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineTableViewCell.swift; sourceTree = "<group>"; };
 		CDC1FBB11FBE2C95004C4C0E /* CoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
 		CDF913CF1F88099F00ED350C /* GymMachineAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymMachineAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDF913D21F88099F00ED350C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -122,7 +120,6 @@
 			children = (
 				CD67F21E1F97FCD7008720B1 /* Gym Images */,
 				CDF913D21F88099F00ED350C /* AppDelegate.swift */,
-				CD8A5F481F9A74E5009392E2 /* MachineTableViewCell.swift */,
 				CDF913D41F88099F00ED350C /* QRViewController.swift */,
 				CDC1FBB11FBE2C95004C4C0E /* CoreDataModel.swift */,
 				CDF913D61F88099F00ED350C /* MachineTableViewController.swift */,
@@ -296,7 +293,6 @@
 				8E26BA011FABADC80036687B /* Gym.xcdatamodeld in Sources */,
 				0DA0A5A91FABD60F001B7EFC /* GymMapLoc.swift in Sources */,
 				0DE3BB011F8862C200359D48 /* MapViewController.swift in Sources */,
-				CD8A5F491F9A74E5009392E2 /* MachineTableViewCell.swift in Sources */,
 				3F0B79B71FAC07D500E40A71 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
