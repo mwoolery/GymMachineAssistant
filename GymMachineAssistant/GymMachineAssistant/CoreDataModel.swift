@@ -103,7 +103,7 @@ class CoreDataModel {
         machine06.desc = "The Roman chair is a piece of exercise equipment. The equipment is mainly used for the lower back, but can also target the gluteal muscles, hamstring and abdominals."
         machine06.machineType = "Weight"
         machine06.location = 7
-        machine06.muscleGroupWorked = "Back, Core, Abdominals, Hamstrings, Abs"
+        machine06.muscleGroupWorked = "Back, Abs"
         machine06.gym = gym0
         
         let machine07 = NSEntityDescription.insertNewObject(forEntityName: "Machine",into: moc)as! Machine
