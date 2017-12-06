@@ -14,12 +14,12 @@ import AVFoundation
 
 class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     
-    @IBOutlet var messageLabel:UILabel!
-        
+   
+    // create the session to capture a QR Code
     var captureSession:AVCaptureSession?
     var videoPreviewLayer:AVCaptureVideoPreviewLayer?
     var qrCodeFrameView:UIView?
-    
+    // Code types that it could potentially scan.  We will scan QR Codes though but this opens opprotunities to other types
     let supportedCodeTypes = [AVMetadataObject.ObjectType.upce,
                               AVMetadataObject.ObjectType.code39,
                               AVMetadataObject.ObjectType.code39Mod43,
@@ -31,14 +31,15 @@ class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegat
                               AVMetadataObject.ObjectType.pdf417,
                               AVMetadataObject.ObjectType.qr]
     
+    // Bring the list of Machines to the viewcontroller, so we will know what is available
     var myMachines = CoreDataModel.fetchAllItems()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //CoreDataModel.doCoreData()
-        // Get an instance of the AVCaptureDevice class to initialize a device object and provide the video as the media type parameter.
-       
+ 
     }
+    // Everything is in here since the capture session will need to be reset each time we come back
+    // Below code is from the AppCoda example, somewhat modified but we could'nt do it with out them
     override func viewWillAppear(_ animated: Bool) {
         let captureDevice = AVCaptureDevice.default(for: AVMediaType.video)
         
@@ -69,11 +70,7 @@ class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegat
             // Start video capture.
             captureSession?.startRunning()
             
-            // Move the message label and top bar to the front
-            //view.bringSubview(toFront: messageLabel)
-            //view.bringSubview(toFront: topbar)
-            
-            // Initialize QR Code Frame to highlight the QR code
+            // makes the green box around it. Actually happens so fast that you probably will miss it
             qrCodeFrameView = UIView()
             
             if let qrCodeFrameView = qrCodeFrameView {
@@ -96,6 +93,8 @@ class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegat
         // Dispose of any resources that can be recreated.
     }
     
+    // This was added in to limit the likliness of extra view controllers being instantiated.
+    // This just ensures that the capture sessions stops as soon we leave the view
     override func viewWillDisappear(_ animated: Bool) {
         if captureSession?.isRunning == true {
             captureSession?.stopRunning()
@@ -104,8 +103,8 @@ class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegat
     
     
     
-    // MARK: - AVCaptureMetadataOutputObjectsDelegate Methods
     
+    // For AVCaptureMetadataDelegate, modified to instantiate view controller instead of just display what is read
     func metadataOutput(_ output: AVCaptureMetadataOutput, didOutput metadataObjects: [AVMetadataObject], from connection: AVCaptureConnection) {
         
         // Check if the metadataObjects array is not nil and it contains at least one object.
@@ -118,20 +117,28 @@ class QRViewController : UIViewController, AVCaptureMetadataOutputObjectsDelegat
         // Get the metadata object.
         let metadataObj = metadataObjects[0] as! AVMetadataMachineReadableCodeObject
         
+        //if it is a valid code, then do things inside
         if supportedCodeTypes.contains(metadataObj.type) {
-            // If the found metadata is equal to the QR code metadata then update the status label's text and set the bounds
-            //let barCodeObject = videoPreviewLayer?.transformedMetadataObject(for: metadataObj)
-            //qrCodeFrameView?.frame = barCodeObject!.bounds
+            // since we found the code, stop running the capture session, doesn't always stop immediately though
+            // which is why we decided to include this in a couple of places
             self.captureSession?.stopRunning()
+            //don't do anything with the string value if it is nil
             if metadataObj.stringValue != nil {
-                
+                // This is what we got from the scan
                 let myMessage = metadataObj.stringValue
+                // Instantiate the view controller like we do in a tableview without prepare method
                 let machineVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "machine_view_controller") as! MachineViewController
-                let machineIndex = myMachines.index(where: { (item) -> Bool in
+                // Go to the machine index that equals what we were scanning. Guarded so if it doesn't find the value it goes to else
+                guard let machineIndex = myMachines.index(where: { (item) -> Bool in
                     item.name == myMessage
-                })
-                machineVC.machine = myMachines[machineIndex!]
-                
+                })else{
+                    //it will restart the capture session so we can try to scan again or scan something else
+                    self.captureSession?.startRunning()
+                    return
+                }
+                //set the VC's machine
+                machineVC.machine = myMachines[machineIndex]
+                // go to the Machines VC
                 self.navigationController?.pushViewController(machineVC, animated: true)
                 
                 

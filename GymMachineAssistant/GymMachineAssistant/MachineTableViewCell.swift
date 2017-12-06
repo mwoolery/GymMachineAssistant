@@ -8,6 +8,7 @@
 
 import UIKit
 
+//This is used to make MachineTableView's Cells, we had to do this for the navigation controller without storyboard
 class MachineTableViewCell: UITableViewCell {
 
     override init(style: UITableViewCellStyle, reuseIdentifier: String?){
