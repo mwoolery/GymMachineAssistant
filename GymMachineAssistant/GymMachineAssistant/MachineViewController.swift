@@ -17,8 +17,6 @@ class MachineViewController: UIViewController {
     
     @IBOutlet weak var machineNameLBL: UILabel!
     
-    @IBOutlet weak var locationNumberLBL: UILabel!
-    
     @IBOutlet weak var exerciseTypeLBL: UILabel!
     
     @IBOutlet weak var muscleGroupLBL: UILabel!
