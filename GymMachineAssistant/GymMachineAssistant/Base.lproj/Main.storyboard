@@ -106,7 +106,7 @@
             </objects>
             <point key="canvasLocation" x="455.19999999999999" y="751.57421289355329"/>
         </scene>
-        <!--Machine View-->
+        <!--Machine View Controller-->
         <scene sceneID="pgF-CF-ot9">
             <objects>
                 <viewController storyboardIdentifier="machine_view_controller" id="msK-3e-QoT" customClass="MachineViewController" customModule="GymMachineAssistant" sceneMemberID="viewController">
@@ -151,13 +151,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KkX-V3-Rvd">
-                                <rect key="frame" x="16" y="366" width="343" height="260"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="343" id="VbL-RO-U3B"/>
-                                    <constraint firstAttribute="height" constant="260" id="vPK-5C-aLH"/>
-                                </constraints>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Muscle Group" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VeN-cT-v0W">
                                 <rect key="frame" x="227" y="134" width="115" height="20.5"/>
                                 <constraints>
@@ -202,6 +195,13 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KkX-V3-Rvd">
+                                <rect key="frame" x="52" y="340" width="286" height="281"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="281" id="bOQ-82-BRg"/>
+                                    <constraint firstAttribute="width" constant="286" id="dUc-3g-7f8"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.63847551383187695" green="0.75710545942256546" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -209,7 +209,6 @@
                             <constraint firstItem="aAb-wl-ZmR" firstAttribute="leading" secondItem="9Dj-is-ZaI" secondAttribute="leading" constant="39" id="CKt-lR-Dje"/>
                             <constraint firstItem="B0c-by-wcb" firstAttribute="leading" secondItem="9Dj-is-ZaI" secondAttribute="leading" constant="36" id="Cqm-8a-wQP"/>
                             <constraint firstItem="fGZ-n2-QEV" firstAttribute="leading" secondItem="17G-zB-DWF" secondAttribute="trailing" constant="82" id="Dqa-Sf-z5A"/>
-                            <constraint firstItem="KkX-V3-Rvd" firstAttribute="leading" secondItem="9Dj-is-ZaI" secondAttribute="leading" constant="16" id="ElO-YA-OvC"/>
                             <constraint firstItem="jMb-wq-3bh" firstAttribute="top" secondItem="zqz-Uk-qQR" secondAttribute="bottom" constant="16" id="Jzp-Bz-wda"/>
                             <constraint firstItem="B0c-by-wcb" firstAttribute="top" secondItem="uUo-VB-3uG" secondAttribute="bottom" constant="38.5" id="Lqj-0A-NPa"/>
                             <constraint firstItem="17G-zB-DWF" firstAttribute="leading" secondItem="9Dj-is-ZaI" secondAttribute="leading" constant="39" id="M2g-zA-JUj"/>
@@ -218,14 +217,15 @@
                             <constraint firstItem="zqz-Uk-qQR" firstAttribute="top" secondItem="8Qp-Tl-rbC" secondAttribute="bottom" id="Zu2-sU-MiU"/>
                             <constraint firstItem="fGZ-n2-QEV" firstAttribute="top" secondItem="jMb-wq-3bh" secondAttribute="bottom" constant="17.5" id="e99-H3-CYp"/>
                             <constraint firstItem="VeN-cT-v0W" firstAttribute="leading" secondItem="uUo-VB-3uG" secondAttribute="trailing" constant="73" id="eSh-Vr-fCF"/>
-                            <constraint firstItem="KkX-V3-Rvd" firstAttribute="top" secondItem="B0c-by-wcb" secondAttribute="bottom" constant="34" id="eyW-HZ-aAg"/>
                             <constraint firstItem="zqz-Uk-qQR" firstAttribute="leading" secondItem="9Dj-is-ZaI" secondAttribute="leading" constant="47" id="heM-cg-onb"/>
+                            <constraint firstItem="B0c-by-wcb" firstAttribute="top" secondItem="VeN-cT-v0W" secondAttribute="bottom" constant="38.5" id="ihZ-eF-FPz"/>
+                            <constraint firstItem="eaG-IY-9Fb" firstAttribute="top" secondItem="KkX-V3-Rvd" secondAttribute="bottom" constant="46" id="rSZ-rN-UH5"/>
                             <constraint firstItem="17G-zB-DWF" firstAttribute="top" secondItem="aAb-wl-ZmR" secondAttribute="bottom" constant="17.5" id="tKy-uq-dLk"/>
                             <constraint firstItem="uUo-VB-3uG" firstAttribute="leading" secondItem="9Dj-is-ZaI" secondAttribute="leading" constant="39" id="zKJ-Zd-DjI"/>
+                            <constraint firstItem="KkX-V3-Rvd" firstAttribute="leading" secondItem="9Dj-is-ZaI" secondAttribute="leading" constant="52" id="zj7-dQ-cOF"/>
                             <constraint firstItem="aAb-wl-ZmR" firstAttribute="top" secondItem="zqz-Uk-qQR" secondAttribute="bottom" constant="16" id="zli-ZP-xGg"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Machine View" id="JIe-CL-feM"/>
                     <connections>
                         <outlet property="descriptionTV" destination="B0c-by-wcb" id="Sd4-zO-OcZ"/>
                         <outlet property="exerciseTypeLBL" destination="fGZ-n2-QEV" id="jV6-Fv-02k"/>
@@ -236,7 +236,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YGI-aR-zgb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4096.8000000000002" y="268.51574212893553"/>
+            <point key="canvasLocation" x="4095.1999999999998" y="267.61619190404798"/>
         </scene>
         <!--Foster's Fitness Center-->
         <scene sceneID="sqC-BS-lHc">
