@@ -242,7 +242,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
                         <segue destination="i15-Bf-Red" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -258,7 +258,7 @@
         <scene sceneID="CT1-b9-lqy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="dXL-qO-iYW" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Machines" image="QR" landscapeImage="QR" largeContentSizeImage="list" selectedImage="listicon" id="huJ-B2-hDi"/>
+                    <tabBarItem key="tabBarItem" title="Machines" image="listicon" landscapeImage="listicon" largeContentSizeImage="list" selectedImage="listicon" id="huJ-B2-hDi"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="4Oh-ZN-hcV">
                         <autoresizingMask key="autoresizingMask"/>
@@ -276,7 +276,7 @@
         <scene sceneID="Weq-hS-gb1">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1ic-CH-nfl" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Gym Map" image="QR" landscapeImage="QR" selectedImage="mapicon" id="e9m-ii-RD5"/>
+                    <tabBarItem key="tabBarItem" title="Gym Map" image="mapicon" landscapeImage="mapicon" largeContentSizeImage="mapicon" selectedImage="mapicon" id="e9m-ii-RD5"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Lwi-Me-3mX">
                         <autoresizingMask key="autoresizingMask"/>
@@ -294,7 +294,7 @@
         <scene sceneID="XRt-a8-7Qk">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="i15-Bf-Red" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Scan QR Code" selectedImage="qrcodeicon" id="acW-dT-cKf"/>
+                    <tabBarItem key="tabBarItem" title="Scan QR Code" image="qrcodeicon" landscapeImage="qrcodeicon" largeContentSizeImage="qrcodeicon" selectedImage="qrcodeicon" id="acW-dT-cKf"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tC5-4o-w1V">
                         <autoresizingMask key="autoresizingMask"/>
@@ -310,7 +310,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="QR" width="20" height="20"/>
         <image name="list" width="512" height="512"/>
         <image name="listicon" width="16" height="16"/>
         <image name="mapicon" width="16" height="16"/>
