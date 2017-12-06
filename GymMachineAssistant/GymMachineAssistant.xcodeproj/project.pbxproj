@@ -10,7 +10,6 @@
 		0DA0A5A91FABD60F001B7EFC /* GymMapLoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0A5A81FABD60F001B7EFC /* GymMapLoc.swift */; };
 		0DE3BB011F8862C200359D48 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3BB001F8862C200359D48 /* MapViewController.swift */; };
 		0DE3BB031F8863B100359D48 /* MachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3BB021F8863B100359D48 /* MachineViewController.swift */; };
-		3F0B79B71FAC07D500E40A71 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0B79B61FAC07D500E40A71 /* HomeViewController.swift */; };
 		8E26BA011FABADC80036687B /* Gym.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8E26B9FF1FABADC80036687B /* Gym.xcdatamodeld */; };
 		CDC1FBB21FBE2C95004C4C0E /* CoreDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDC1FBB11FBE2C95004C4C0E /* CoreDataModel.swift */; };
 		CDF913D31F88099F00ED350C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDF913D21F88099F00ED350C /* AppDelegate.swift */; };
@@ -44,7 +43,6 @@
 		0DA0A5A81FABD60F001B7EFC /* GymMapLoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymMapLoc.swift; sourceTree = "<group>"; };
 		0DE3BB001F8862C200359D48 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0DE3BB021F8863B100359D48 /* MachineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineViewController.swift; sourceTree = "<group>"; };
-		3F0B79B61FAC07D500E40A71 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		8E26BA001FABADC80036687B /* Gym.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Gym.xcdatamodel; sourceTree = "<group>"; };
 		CDC1FBB11FBE2C95004C4C0E /* CoreDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataModel.swift; sourceTree = "<group>"; };
 		CDF913CF1F88099F00ED350C /* GymMachineAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GymMachineAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,7 +122,6 @@
 				CDC1FBB11FBE2C95004C4C0E /* CoreDataModel.swift */,
 				CDF913D61F88099F00ED350C /* MachineTableViewController.swift */,
 				CDF913D81F88099F00ED350C /* Main.storyboard */,
-				3F0B79B61FAC07D500E40A71 /* HomeViewController.swift */,
 				8E26B9FF1FABADC80036687B /* Gym.xcdatamodeld */,
 				0DE3BB021F8863B100359D48 /* MachineViewController.swift */,
 				CDF913DB1F88099F00ED350C /* Assets.xcassets */,
@@ -293,7 +290,6 @@
 				8E26BA011FABADC80036687B /* Gym.xcdatamodeld in Sources */,
 				0DA0A5A91FABD60F001B7EFC /* GymMapLoc.swift in Sources */,
 				0DE3BB011F8862C200359D48 /* MapViewController.swift in Sources */,
-				3F0B79B71FAC07D500E40A71 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

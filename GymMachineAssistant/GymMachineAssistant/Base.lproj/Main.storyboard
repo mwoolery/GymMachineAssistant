@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="lVS-IV-hiD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -238,35 +238,6 @@
             </objects>
             <point key="canvasLocation" x="4095.1999999999998" y="267.61619190404798"/>
         </scene>
-        <!--Foster's Fitness Center-->
-        <scene sceneID="sqC-BS-lHc">
-            <objects>
-                <viewController id="lVS-IV-hiD" customClass="HomeViewController" customModule="GymMachineAssistant" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="z4t-js-opk"/>
-                        <viewControllerLayoutGuide type="bottom" id="otv-wD-lYI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="ePa-MA-4OO">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Copy of Blue Fitness Instagram template" translatesAutoresizingMaskIntoConstraints="NO" id="mIW-zj-umD">
-                                <rect key="frame" x="-1" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <edgeInsets key="layoutMargins" top="8" left="0.0" bottom="0.0" right="8"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.036460063433929046" green="0.35698181053003997" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Foster's Fitness Center" id="vOH-RW-QdB"/>
-                    <connections>
-                        <segue destination="49e-Tb-3d3" kind="showDetail" identifier="navigateToTabs" action="showViewController:sender:" id="yEa-O1-jfL"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="BPt-Ze-pVp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-530.39999999999998" y="-25.637181409295355"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
@@ -285,7 +256,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="218" y="-13"/>
+            <point key="canvasLocation" x="-81" y="-35"/>
         </scene>
         <!--Machines-->
         <scene sceneID="CT1-b9-lqy">
@@ -308,7 +279,6 @@
         <!--Gym Map-->
         <scene sceneID="Weq-hS-gb1">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1HM-OK-wB1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1ic-CH-nfl" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Gym Map" image="QR" landscapeImage="QR" selectedImage="mapicon" id="e9m-ii-RD5"/>
                     <toolbarItems/>
@@ -320,6 +290,7 @@
                         <segue destination="8ue-K0-d3b" kind="relationship" relationship="rootViewController" id="CYa-8F-6rh"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1HM-OK-wB1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-311" y="752"/>
         </scene>
@@ -343,7 +314,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Copy of Blue Fitness Instagram template" width="1080" height="1080"/>
         <image name="QR" width="20" height="20"/>
         <image name="list" width="512" height="512"/>
         <image name="listicon" width="16" height="16"/>
