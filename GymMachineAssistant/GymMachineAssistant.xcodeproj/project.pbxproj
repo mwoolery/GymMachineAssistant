@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DA0A5A91FABD60F001B7EFC /* GymMapLoc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0A5A81FABD60F001B7EFC /* GymMapLoc.swift */; };
+		0DA0A5A91FABD60F001B7EFC /* GymMapPin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DA0A5A81FABD60F001B7EFC /* GymMapPin.swift */; };
 		0DE3BB011F8862C200359D48 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3BB001F8862C200359D48 /* MapViewController.swift */; };
 		0DE3BB031F8863B100359D48 /* MachineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE3BB021F8863B100359D48 /* MachineViewController.swift */; };
 		3F5538811FD881F000A828E2 /* LoadingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F5538801FD881F000A828E2 /* LoadingViewController.swift */; };
@@ -41,7 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0DA0A5A81FABD60F001B7EFC /* GymMapLoc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymMapLoc.swift; sourceTree = "<group>"; };
+		0DA0A5A81FABD60F001B7EFC /* GymMapPin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GymMapPin.swift; sourceTree = "<group>"; };
 		0DE3BB001F8862C200359D48 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		0DE3BB021F8863B100359D48 /* MachineViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MachineViewController.swift; sourceTree = "<group>"; };
 		3F5538801FD881F000A828E2 /* LoadingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewController.swift; sourceTree = "<group>"; };
@@ -131,7 +131,7 @@
 				CDF913DD1F88099F00ED350C /* LaunchScreen.storyboard */,
 				CDF913E01F88099F00ED350C /* Info.plist */,
 				0DE3BB001F8862C200359D48 /* MapViewController.swift */,
-				0DA0A5A81FABD60F001B7EFC /* GymMapLoc.swift */,
+				0DA0A5A81FABD60F001B7EFC /* GymMapPin.swift */,
 			);
 			path = GymMachineAssistant;
 			sourceTree = "<group>";
@@ -292,7 +292,7 @@
 				CDC1FBB21FBE2C95004C4C0E /* CoreDataModel.swift in Sources */,
 				3F5538811FD881F000A828E2 /* LoadingViewController.swift in Sources */,
 				8E26BA011FABADC80036687B /* Gym.xcdatamodeld in Sources */,
-				0DA0A5A91FABD60F001B7EFC /* GymMapLoc.swift in Sources */,
+				0DA0A5A91FABD60F001B7EFC /* GymMapPin.swift in Sources */,
 				0DE3BB011F8862C200359D48 /* MapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

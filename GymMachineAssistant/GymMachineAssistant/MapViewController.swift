@@ -27,7 +27,7 @@ class MapViewController: UIViewController , MKMapViewDelegate{
             let gymMapLocation:CLLocationCoordinate2D = CLLocationCoordinate2DMake(i.latitude, i.longitude)
             mapView.setRegion(MKCoordinateRegionMakeWithDistance(gymMapLocation, distance, distance), animated: true)
             //set the pin locations
-            let gymPinLoc = GymMapLoc(title: i.name!, subtitle: i.name!, coordinate: gymMapLocation)
+            let gymPinLoc = GymMapPin(title: i.name!, subtitle: i.name!, coordinate: gymMapLocation)
             //add the annotation
             mapView.addAnnotation(gymPinLoc)
         }

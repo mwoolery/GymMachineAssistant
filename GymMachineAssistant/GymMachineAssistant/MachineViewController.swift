@@ -1,5 +1,5 @@
 //
-//  MachineviewViewController.swift
+//  MachineViewController.swift
 //  GymMachineAssistant
 //
 //  Created by Kalvakota,Vaishnavi on 10/6/17.

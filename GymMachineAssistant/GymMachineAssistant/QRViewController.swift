@@ -1,5 +1,5 @@
 //
-//  FirstViewController.swift
+//  QRViewController.swift
 //  GymMachineAssistant
 //
 //  Created by Woolery,Matthew A on 10/6/17.

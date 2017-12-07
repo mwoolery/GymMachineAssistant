@@ -1,5 +1,5 @@
 //
-//  GymMapLoc.swift
+//  GymMapPin.swift
 //  GymMachineAssistant
 //
 //  Created by Kalvakota,Vaishnavi on 11/2/17.
@@ -8,7 +8,7 @@
 
 import MapKit
 // This is used to make pin annotations
-class GymMapLoc:  NSObject, MKAnnotation{
+class GymMapPin:  NSObject, MKAnnotation{
     
     var title: String?
     var subtitle: String?
