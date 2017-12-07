@@ -193,10 +193,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="KkX-V3-Rvd">
-                                <rect key="frame" x="39" y="348" width="286" height="281"/>
+                                <rect key="frame" x="47" y="394" width="278" height="235"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="286" id="HlE-8H-ZBk"/>
-                                    <constraint firstAttribute="height" constant="281" id="ZHm-Vp-PlQ"/>
+                                    <constraint firstAttribute="width" constant="278" id="5qF-uJ-zBQ"/>
+                                    <constraint firstAttribute="height" constant="235" id="I6x-cZ-Phy"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -266,8 +266,8 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="i15-Bf-Red" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="1ic-CH-nfl" kind="relationship" relationship="viewControllers" id="6bY-Uj-VY5"/>
+                        <segue destination="i15-Bf-Red" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
                         <segue destination="dXL-qO-iYW" kind="relationship" relationship="viewControllers" id="zXS-xm-hol"/>
                     </connections>
                 </tabBarController>
