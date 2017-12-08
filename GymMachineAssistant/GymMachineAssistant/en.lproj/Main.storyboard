@@ -266,8 +266,8 @@
                         <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
-                        <segue destination="1ic-CH-nfl" kind="relationship" relationship="viewControllers" id="6bY-Uj-VY5"/>
                         <segue destination="i15-Bf-Red" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="1ic-CH-nfl" kind="relationship" relationship="viewControllers" id="6bY-Uj-VY5"/>
                         <segue destination="dXL-qO-iYW" kind="relationship" relationship="viewControllers" id="zXS-xm-hol"/>
                     </connections>
                 </tabBarController>
